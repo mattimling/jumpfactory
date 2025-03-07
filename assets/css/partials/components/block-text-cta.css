@@ -1,0 +1,3 @@
+.block-text-cta-text ul {
+  @apply list-disc flex flex-col gap-y-8 pl-6;
+}
