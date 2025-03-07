@@ -1,6 +1,7 @@
 <?php
 
 $image = get_sub_field( 'image' );
+$image_size = get_sub_field( 'image_size' );
 
 $star_highlight_text = get_sub_field( 'star_highlight_text' );
 $star_highlight_color = get_sub_field( 'star_highlight_color' );
@@ -10,7 +11,8 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 
 <div class="mx-8 lg:mx-16 relative">
 
-	<div class="lg:aspect-[1580/654] overflow-hidden rounded-[10px] js-element-blurin relative z-0 js-image-star-highlight-image">
+	<!-- Image -->
+	<div class="aspect-[4/3] <?= $image_size == 'Small' ? 'lg:aspect-[1580/654]' : 'lg:aspect-video'; ?> overflow-hidden rounded-[10px] js-element-blurin relative z-0 js-image-star-highlight-image">
 		<?= mi_get_image( $image, 'xl', 'w-full h-full object-cover' ); ?>
 	</div>
 
