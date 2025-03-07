@@ -11,6 +11,12 @@
 		elseif ( get_row_layout() == 'headline' ) :
 			get_template_part( 'components/acf-blocks/headline' );
 
+		elseif ( get_row_layout() == 'text_cta' ) :
+			get_template_part( 'components/acf-blocks/text-cta' );
+
+		elseif ( get_row_layout() == 'image_star_highlight' ) :
+			get_template_part( 'components/acf-blocks/image-star-highlight' );
+
 		endif;
 
 		?>
