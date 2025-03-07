@@ -38,7 +38,6 @@
                 "id": ""
             },
             "choices": {
-                "None": "None",
                 "Blue": "Blue",
                 "Light Blue": "Light Blue",
                 "Red": "Red"
@@ -71,5 +70,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741195805
+    "modified": 1741348810
 }
