@@ -5,11 +5,11 @@
 
 		<?php
 
-		if ( get_row_layout() == 'title_paragraph' ) :
-			get_template_part( 'components/acf-blocks/title-paragraph' );
+		if ( get_row_layout() == 'hero' ) :
+			get_template_part( 'components/acf-blocks/hero' );
 
-		elseif ( get_row_layout() == 'contact_form' ) :
-			get_template_part( 'components/acf-blocks/contact-form' );
+		elseif ( get_row_layout() == 'headline' ) :
+			get_template_part( 'components/acf-blocks/headline' );
 
 		endif;
 
