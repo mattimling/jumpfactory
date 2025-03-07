@@ -28,9 +28,8 @@ add_action( 'wp_enqueue_scripts', function () {
 	$scripts_vendor = [ 
 		'lenis.min',
 		'anime.min',
-		// 'barba_core-2.9.7',
 		'barba_core-2.10.3',
-		// 'swiper-bundle.min',
+		'swiper-bundle.min',
 	];
 
 	// Define Module JS files to enqueue
@@ -40,8 +39,9 @@ add_action( 'wp_enqueue_scripts', function () {
 		'preloader',
 		'lenis-scroll',
 		'barba-page-transition',
-		// 'slider-gallery',
 		'if-function-exist',
+		'hero',
+		'element-blurin',
 	];
 
 	// Define External JS files to enqueue
