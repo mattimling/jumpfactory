@@ -1,23 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+
 @font-face {
-  font-family: "nr";
-  src: url("../fonts/nr.woff2") format("woff2"),
-    url("../fonts/nr.woff") format("woff");
+  font-family: "agn";
+  src: url("../fonts/xLZOxB3xeV6efISFc2LT.woff2") format("woff2"),
+    url("../fonts/xLZOxB3xeV6efISFc2LT.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "m";
+  src: url("../fonts/PFR7CPtrVbFgulfXm6qE.woff2") format("woff2"),
+    url("../fonts/PFR7CPtrVbFgulfXm6qE.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "nri";
-  src: url("../fonts/nri.woff2") format("woff2"),
-    url("../fonts/nri.woff") format("woff");
+  font-family: "b";
+  src: url("../fonts/V7aXs3xHmV53f8vQc7wo.woff2") format("woff2"),
+    url("../fonts/V7aXs3xHmV53f8vQc7wo.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: "nh";
-  src: url("../fonts/nh.woff2") format("woff2"),
-    url("../fonts/nh.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+ */

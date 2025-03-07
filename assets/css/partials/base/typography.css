@@ -1,11 +1,11 @@
-.text-pr-xl {
-  @apply font-nh text-[24px] lg:text-[27px] uppercase leading-[1.15];
+.text-body {
+  @apply text-[18px] font-medium leading-[1.1];
 }
 
-.text-pr-md {
-  @apply font-nr text-[18px] lg:text-[20px] leading-[1.25];
+.text-h1 {
+  @apply font-agn leading-[0.9] text-[calc(4rem+4vw)] uppercase -mt-[calc(0.2rem+0.1vw)] -mb-[calc(0.3rem+1vw)];
 }
 
-.text-pr-sm {
-  @apply font-nr text-[16px] leading-[1.15];
+.text-h2 {
+  @apply font-agn leading-[1] text-[calc(1rem+1vw)];
 }

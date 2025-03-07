@@ -23,9 +23,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				'nr': ['nr', 'sans-serif'],
-				'nri': ['nri', 'sans-serif'],
-				'nh': ['nh', 'sans-serif'],
+				'pjs': ['Plus Jakarta Sans', 'sans-serif'],
+				'agn': ['agn', 'sans-serif'],
 			},
 			height: {
 				// screen: ['100vh', '100svh'],
@@ -36,12 +35,11 @@ module.exports = {
 		},
 		colors: {
 			transparent: 'transparent',
-			'charcoal': '#0A1612',
-			'gray1': '#C6C6C6', // Web
-			'gray2': '#DCDCDC',
-			'gray3': '#F8F7F7', // Light
-			'white': '#fff',
-			'gold': '#D6A159',
+			'charcoal': '#212125',
+			'blue': '#272CC5',
+			'lightBlue': '#5C95ED',
+			'red': '#DF0D29',
+			'beige': '#EEE9D2',
 		},
 	},
 	plugins: [

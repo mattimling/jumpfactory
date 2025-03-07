@@ -7,11 +7,7 @@
 @import "partials/base/typography.css";
 
 /* Components */
-@import "partials/components/element-appear.css";
-@import "partials/components/block-paragraph.css";
-@import "partials/components/block-project-details.css";
-@import "partials/components/blog.css";
-@import "partials/components/content-page.css";
+/* @import "partials/components/element-appear.css"; */
 
 /* Config */
 @config './tailwind.config.js';
