@@ -3,10 +3,8 @@ function hero() {
     const heroMedia = document.querySelector('.js-hero-media');
     const heroImage = heroMedia?.querySelector('.js-hero-media-inner'); // Target the image inside
     const heroTitles = document.querySelector('.js-hero-titles'); // Titles (may not exist)
-    const heroStar = document.querySelector('.js-hero-star'); // Star element (may not exist)
     const heroIcons = document.querySelectorAll('.js-hero-icon'); // Multiple hero icons
     const heroVideo = heroImage?.querySelector('video'); // Check for a video inside
-
 
     if (!hero || !heroMedia || !heroImage) return;
 
@@ -30,24 +28,12 @@ function hero() {
                 heroTitles.style.transform = `scale(${scaleValue})`;
             }
 
-            if (heroStar) {
-                const rotation = scroll * 0.25; // Rotate star based on scroll
-                heroStar.style.transform = `rotate(${rotation}deg)`;
-            }
-
             // Apply slower parallax effect for each heroIcon
             heroIcons.forEach((icon, index) => {
-                let multiplier = 0.12; // Default multiplier
-
-                // If it's the second icon, move it 2x slower
-                if (index === 1) {
-                    multiplier = 0.02; // 2x slower than the first one
-                }
-
+                let multiplier = index === 1 ? 0.02 : 0.12; // Second icon moves slower
                 const slowerParallaxOffset = scroll * multiplier; // Slower parallax effect
                 icon.style.transform = `translateY(${slowerParallaxOffset}px)`; // Moves hero icon slower
             });
-
         });
 
         // Play video
