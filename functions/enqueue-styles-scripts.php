@@ -42,6 +42,8 @@ add_action( 'wp_enqueue_scripts', function () {
 		'if-function-exist',
 		'hero',
 		'element-blurin',
+		'image-star-highlight',
+		'star-highlight',
 	];
 
 	// Define External JS files to enqueue
