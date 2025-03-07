@@ -51,6 +51,7 @@ function barbaPageTransition() {
         setTimeout(timer => {
             ifFunctionExist('hero');
             ifFunctionExist('elementBlurin');
+            ifFunctionExist('starHighlight');
         }, 100);
 
     }

@@ -236,6 +236,140 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67cac6cc3f27d": {
+                    "key": "layout_67cac6cc3f27d",
+                    "name": "text_cta",
+                    "label": "Text + CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67cac7093f280",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_67cac7433f281",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_67cadedde2a0f": {
+                    "key": "layout_67cadedde2a0f",
+                    "name": "image_star_highlight",
+                    "label": "Image + Star Highlight",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67cadeeee2a11",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_67cadf977fa44",
+                            "label": "Star Highlight",
+                            "name": "star_highlight",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_67c8888e45b63"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 1,
+                            "prefix_name": 1
+                        },
+                        {
+                            "key": "field_67cadffe954f9",
+                            "label": "Star Highlight Position",
+                            "name": "star_highlight_position",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Top Left": "Top Left",
+                                "Top Right": "Top Right",
+                                "Bottom Left": "Bottom Left",
+                                "Bottom Right": "Bottom Right"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "allow_in_bindings": 1,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -263,5 +397,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741278116
+    "modified": 1741349716
 }
