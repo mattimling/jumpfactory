@@ -22,7 +22,7 @@ function barbaPageTransition() {
             duration: transitionDelay,
         });
 
-        closeMenu();
+        ifFunctionExist('closeMenu');
 
     }
 
