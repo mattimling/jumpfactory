@@ -20,6 +20,7 @@ $required_functions = [
 	'responsive-images',
 	'snippets',
 	'theme-settings',
+	'cpt-global-blocks',
 ];
 
 foreach ( $required_functions as $function ) {
