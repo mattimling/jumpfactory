@@ -22,6 +22,8 @@ function barbaPageTransition() {
             duration: transitionDelay,
         });
 
+        closeMenu();
+
     }
 
     function ti(data) {
@@ -52,6 +54,7 @@ function barbaPageTransition() {
             ifFunctionExist('hero');
             ifFunctionExist('elementBlurin');
             ifFunctionExist('starHighlight');
+            ifFunctionExist('footerLogo');
         }, 100);
 
     }
