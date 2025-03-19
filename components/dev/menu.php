@@ -1,4 +1,4 @@
-<div class="fixed bottom-0 right-1/2 z-50 bg-[#ff0000] text-[#fff] text-[15px] p-2">
+<div class="fixed bottom-1/2 left-0 z-50 bg-[#ff0000] text-[#fff] text-[15px] p-2">
 
 	<?php
 

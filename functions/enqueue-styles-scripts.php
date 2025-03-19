@@ -44,6 +44,9 @@ add_action( 'wp_enqueue_scripts', function () {
 		'element-blurin',
 		'image-star-highlight',
 		'star-highlight',
+		'header-color-change',
+		'menu',
+		'footer-logo',
 	];
 
 	// Define External JS files to enqueue
