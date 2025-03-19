@@ -35,7 +35,7 @@ function closeMenu() {
         [hbiOver, hbiUnder].forEach(el => el.classList.remove(...transitionClasses));
 
         // Close all open submenus
-        document.querySelectorAll('.sub-menu').forEach(subMenu => {
+        menu.querySelectorAll('.sub-menu').forEach(subMenu => {
             subMenu.style.maxHeight = "0px";
             subMenu.style.opacity = "0";
             subMenu.style.visibility = "hidden";
