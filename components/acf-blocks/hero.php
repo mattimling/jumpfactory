@@ -52,7 +52,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 				<?= $title; ?>
 			</h1>
 
-			<h2 class="col-span-12 xl:col-span-6 text-h2 text-beige will-change-transform">
+			<h2 class="col-span-12 xl:col-span-6 text-h3 text-beige will-change-transform">
 				<?= $subtitle; ?>
 			</h2>
 

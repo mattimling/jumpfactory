@@ -2,12 +2,14 @@
 
 $text = $args['text'] ?? '';
 $color = $args['color'] ?? '';
+$blurin = $args['blurin'] ?? false;
+$rotate_on_scroll = $args['rotate_on_scroll'] ?? false;
 
 ?>
 
-<div class="w-56 h-56 js-element-blurin relative">
+<div class="w-56 h-56 <?= $blurin ? 'js-element-blurin' : ''; ?> relative">
 
-	<div class="js-hero-star">
+	<div class="<?= $rotate_on_scroll ? 'js-hero-star' : 'js-hero-star-static'; ?>">
 		<?php
 
 		switch ( $color ) {

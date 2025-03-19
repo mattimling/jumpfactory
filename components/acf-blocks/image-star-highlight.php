@@ -44,6 +44,8 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 			<?php get_template_part( 'components/acf-blocks/_star_highlight', null, array(
 				'text' => $star_highlight_text,
 				'color' => $star_highlight_color,
+				'blurin' => true,
+				'rotate_on_scroll' => true,
 			) ); ?>
 
 		</div>
