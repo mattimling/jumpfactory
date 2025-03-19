@@ -2,6 +2,10 @@
   @apply text-[18px] font-medium leading-[1.1];
 }
 
+.text-h5 {
+  @apply text-[26px] font-medium leading-[1.1];
+}
+
 .text-h1 {
   @apply font-agn leading-[0.9] text-[calc(4rem+4vw)] uppercase -mt-[calc(0.2rem+0.1vw)] -mb-[calc(0.3rem+1vw)];
 }

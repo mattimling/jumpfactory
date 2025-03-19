@@ -14,3 +14,7 @@
 .button-big:hover:after {
   @apply w-[500px] h-[500px] transition-all duration-700;
 }
+
+.button-beige {
+  @apply text-beige border-beige;
+}
