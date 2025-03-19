@@ -9,6 +9,8 @@
 /* Components */
 @import "partials/components/buttons.css";
 @import "partials/components/block-text-cta.css";
+@import "partials/components/menu.css";
+@import "partials/components/footer.css";
 
 /* Config */
 @config './tailwind.config.js';

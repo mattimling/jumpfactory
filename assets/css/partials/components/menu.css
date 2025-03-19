@@ -1,0 +1,21 @@
+.main-menu {
+}
+
+.main-menu > li > a {
+  @apply text-h2 text-beige;
+}
+.main-menu .sub-menu {
+  @apply max-h-0 overflow-hidden invisible opacity-0 transition-all duration-500 ease-in-out pl-8;
+}
+
+.main-menu .sub-menu li:last-of-type a {
+  @apply mb-8;
+}
+
+.main-menu .sub-menu a {
+  @apply text-h3 text-beige ml-8 inline-flex;
+}
+
+.main-menu .menu-item-has-children > a {
+  @apply whitespace-nowrap inline-flex pr-20;
+}

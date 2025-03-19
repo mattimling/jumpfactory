@@ -7,5 +7,13 @@
 }
 
 .text-h2 {
+  @apply font-agn leading-[0.9] text-[calc(3rem+3vw)] uppercase;
+}
+
+.text-h3 {
   @apply font-agn leading-[1] text-[calc(1rem+1vw)];
+}
+
+.text-h4 {
+  @apply font-agn leading-[1] text-[calc(0.8rem+0.8vw)];
 }
