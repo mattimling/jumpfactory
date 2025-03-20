@@ -1,15 +1,7 @@
 <?php
 
 $image = get_sub_field( 'image' );
-$image_size = get_sub_field( 'image_size' );
-
-if ( $image_size == 'Small' ) {
-	$size = 'aspect-[4/3] lg:aspect-[1580/654]';
-} elseif ( $image_size == 'Big' ) {
-	$size = 'aspect-[4/3] lg:aspect-video';
-} elseif ( $image_size == 'Original' ) {
-	$size = '';
-}
+$description_overlay = get_sub_field( 'description_overlay' );
 
 $star_highlight_text = get_sub_field( 'star_highlight_text' );
 $star_highlight_color = get_sub_field( 'star_highlight_color' );
@@ -20,8 +12,12 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 <div class="mx-8 lg:mx-16 relative">
 
 	<!-- Image -->
-	<div class=" <?= $size; ?> overflow-hidden rounded-[10px] js-element-blurin relative z-0 js-image-star-highlight-image">
+	<div class="overflow-hidden rounded-[10px] js-element-blurin relative z-0 js-image-star-highlight-image">
 		<?= mi_get_image( $image, 'xl', 'w-full h-full object-cover' ); ?>
+
+		<div class="absolute top-0 left-0 w-full h-full">
+			<?= mi_get_image( $description_overlay, 'xl', 'w-full h-full object-cover' ); ?>
+		</div>
 	</div>
 
 	<!-- Star Highlight -->

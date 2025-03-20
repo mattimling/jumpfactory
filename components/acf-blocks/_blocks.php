@@ -12,11 +12,26 @@ elseif ( get_row_layout() == 'text_cta' ) :
 elseif ( get_row_layout() == 'image_star_highlight' ) :
 	get_template_part( 'components/acf-blocks/image-star-highlight' );
 
+elseif ( get_row_layout() == 'jump_zones' ) :
+	get_template_part( 'components/acf-blocks/jump-zones' );
+
 elseif ( get_row_layout() == 'global_block' ) :
 	get_template_part( 'components/acf-blocks/global-block' );
 
 elseif ( get_row_layout() == 'call_to_action' ) :
 	get_template_part( 'components/acf-blocks/call-to-action' );
+
+elseif ( get_row_layout() == 'how_it_works' ) :
+	get_template_part( 'components/acf-blocks/how-it-works' );
+
+elseif ( get_row_layout() == 'contact_person' ) :
+	get_template_part( 'components/acf-blocks/contact-person' );
+
+elseif ( get_row_layout() == 'the_team' ) :
+	get_template_part( 'components/acf-blocks/the-team' );
+
+elseif ( get_row_layout() == 'opening_times' ) :
+	get_template_part( 'components/acf-blocks/opening-times' );
 
 endif;
 

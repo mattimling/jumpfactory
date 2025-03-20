@@ -46,7 +46,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 	<!-- Title + Subtitle -->
 	<?php if ( $title || $subtitle ) : ?>
 
-		<div class="absolute bottom-0 left-0 p-8 lg:p-16 grid grid-cols-12 gap-x-8 gap-y-8 js-hero-titles w-full">
+		<div class="absolute bottom-0 left-0 p-8 lg:p-16 grid grid-cols-12 lg:gap-x-16 gap-y-8 js-hero-titles w-full">
 
 			<h1 class="col-span-12 text-h1 text-beige break-words will-change-transform">
 				<?= $title; ?>
