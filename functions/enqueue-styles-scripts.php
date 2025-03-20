@@ -47,6 +47,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'header-color-change',
 		'menu',
 		'footer-logo',
+		'button-hover',
 	];
 
 	// Define External JS files to enqueue
