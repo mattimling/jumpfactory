@@ -11,6 +11,7 @@
 @import "partials/components/block-text-cta.css";
 @import "partials/components/menu.css";
 @import "partials/components/footer.css";
+@import "partials/components/the-team.css";
 
 /* Config */
 @config './tailwind.config.js';

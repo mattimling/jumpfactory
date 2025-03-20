@@ -1,23 +1,23 @@
-.text-body {
-  @apply text-[18px] font-medium leading-[1.1];
+.text-h1 {
+  @apply font-agn leading-[0.9] text-[calc(4rem+4vw)] uppercase -mt-[calc(0.2rem+0.1vw)] -mb-[calc(0.3rem+1vw)];
+}
+
+.text-h2 {
+  @apply font-agn leading-[0.9] text-[calc(3rem+3vw)] uppercase -mt-[calc(0.1rem+0.05vw)] -mb-[calc(0.3rem+0.8vw)];
+}
+
+.text-h3 {
+  @apply font-agn leading-[1] text-[calc(1rem+1vw)] -mt-[calc(0.1rem+0.05vw)] -mb-[calc(0.05rem+0.3vw)];
+}
+
+.text-h4 {
+  @apply font-agn leading-[1] text-[calc(0.8rem+0.8vw)] -mt-[calc(0.05rem+0.05vw)] -mb-[calc(0.05rem+0.2vw)];
 }
 
 .text-h5 {
   @apply text-[26px] font-medium leading-[1.1];
 }
 
-.text-h1 {
-  @apply font-agn leading-[0.9] text-[calc(4rem+4vw)] uppercase -mt-[calc(0.2rem+0.1vw)] -mb-[calc(0.3rem+1vw)];
-}
-
-.text-h2 {
-  @apply font-agn leading-[0.9] text-[calc(3rem+3vw)] uppercase;
-}
-
-.text-h3 {
-  @apply font-agn leading-[1] text-[calc(1rem+1vw)];
-}
-
-.text-h4 {
-  @apply font-agn leading-[1] text-[calc(0.8rem+0.8vw)];
+.text-body {
+  @apply text-[18px] font-medium leading-[1.1];
 }

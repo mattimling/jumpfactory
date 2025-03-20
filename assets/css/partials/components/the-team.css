@@ -1,0 +1,10 @@
+.the-team {
+}
+
+.the-team-member:nth-child(4n + 2) {
+  @apply xl:mr-[calc(33.33%-2.666rem)];
+}
+
+.the-team-member:nth-child(4n + 3) {
+  @apply xl:ml-[calc(33.33%+1.33rem)];
+}
