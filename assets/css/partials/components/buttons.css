@@ -1,20 +1,45 @@
 .button-big {
-  @apply font-pjs font-bold text-[20px] text-red uppercase border-[3px] border-red px-10 py-6 relative hover:text-beige overflow-hidden ease-in-out;
+  @apply overflow-hidden relative whitespace-nowrap text-red hover:text-beige transition-all duration-700 border-[3px] border-red text-button uppercase;
 }
 
-.button-big:hover {
-  @apply transition-all duration-700;
+.button-beige .button-big {
+  @apply text-beige border-beige hover:border-red;
 }
 
-.button-big:after {
-  @apply content-[''] absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-red aspect-square ease-in-out -z-[1];
-  transform: translate(-50%, -50%);
+.button-big-circle {
+  @apply rounded-[10000px] absolute top-0 left-0 w-0 h-0 ml-0 mt-0 pointer-events-none ease-in-out;
 }
 
-.button-big:hover:after {
-  @apply w-[500px] h-[500px] transition-all duration-700;
+.button-big-inner {
+  @apply w-full h-full px-[calc(1rem+2vw)] py-[calc(0.6rem+0.6vw)] inline-block;
 }
 
-.button-beige {
-  @apply text-beige border-beige;
+.button-big-text {
+  @apply relative z-10;
+}
+
+.big-button-explode {
+  animation: explode 0.7s forwards;
+}
+
+.big-button-desplode {
+  animation: desplode 0.7s forwards;
+}
+
+@keyframes explode {
+  0% {
+    @apply w-0 h-0 ml-0 mt-0 bg-red;
+  }
+  100% {
+    @apply w-[800px] h-[800px] -ml-[400px] -mt-[400px] bg-red;
+  }
+}
+
+@keyframes desplode {
+  0% {
+    @apply w-[800px] h-[800px] -ml-[400px] -mt-[400px] bg-red;
+  }
+  100% {
+    @apply w-0 h-0 ml-0 mt-0 bg-red;
+  }
 }

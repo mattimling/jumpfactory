@@ -1,19 +1,37 @@
 .main-menu {
+  @apply overflow-hidden;
 }
 
 .main-menu > li > a {
-  @apply text-h2 text-beige;
-}
-.main-menu .sub-menu {
-  @apply max-h-0 overflow-hidden invisible opacity-0 transition-all duration-500 ease-in-out pl-8;
+  @apply text-h2 text-beige inline-flex py-2 lg:py-3;
 }
 
-.main-menu .sub-menu li:last-of-type a {
-  @apply mb-8;
+.main-menu a {
+  @apply lg:-translate-x-16 lg:hover:translate-x-2 transition-all duration-300 ease-in-out relative overflow-hidden;
+}
+
+.main-menu a.is-active {
+  @apply translate-x-2;
+}
+
+.main-menu a:before {
+  @apply content-['/'] mr-5;
+}
+
+.main-menu .sub-menu {
+  @apply max-h-0 overflow-hidden invisible opacity-0 transition-all duration-500 ease-in-out pl-2 lg:pl-4;
+}
+
+.main-menu .sub-menu li:first-of-type {
+  @apply pt-4 lg:pt-8;
+}
+
+.main-menu .sub-menu li:last-of-type {
+  @apply pb-4 lg:pb-8;
 }
 
 .main-menu .sub-menu a {
-  @apply text-h3 text-beige ml-8 inline-flex;
+  @apply text-h3 text-beige ml-8;
 }
 
 .main-menu .menu-item-has-children > a {
