@@ -19,11 +19,11 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 
 	<div class="relative z-[1] text-beige flex flex-col h-full justify-between">
 
-		<h3 class="text-h2 pt-24 pb-24 lg:pb-48 2xl:pb-72 2xl:max-w-[70vw]">
+		<h3 class="text-h2 pt-24 pb-16 lg:py-32 xl:py-48 2xl:max-w-[70vw]">
 			<?= $title; ?>
 		</h3>
 
-		<div class="flex max-lg:flex-col gap-y-8 justify-between lg:items-end">
+		<div class="flex max-lg:flex-col gap-y-16 justify-between lg:items-end">
 
 			<h5 class="text-h5 max-w-[500px]">
 				<?= $text; ?>
@@ -33,7 +33,10 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 
 				<div class="col-span-12 xl:col-span-6 flex xl:justify-end xl:items-end will-change-transform">
 
-					<?= mi_get_link( $button, 'button-big button-beige' ); ?>
+					<?php get_template_part( 'components/acf-blocks/_button', null, array(
+						'button' => $button,
+						'class' => ' button-beige'
+					) ); ?>
 
 				</div>
 

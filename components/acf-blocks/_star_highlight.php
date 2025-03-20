@@ -7,7 +7,7 @@ $rotate_on_scroll = $args['rotate_on_scroll'] ?? false;
 
 ?>
 
-<div class="w-56 h-56 <?= $blurin ? 'js-element-blurin' : ''; ?> relative">
+<div class="w-56 h-56 <?= $blurin ? 'js-element-blurin' : ''; ?> relative overflow-hidden">
 
 	<div class="<?= $rotate_on_scroll ? 'js-hero-star' : 'js-hero-star-static'; ?>">
 		<?php
@@ -32,7 +32,7 @@ $rotate_on_scroll = $args['rotate_on_scroll'] ?? false;
 
 	<div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center z-[1]">
 
-		<div class="font-agn text-[22px] text-beige uppercase m-11 leading-[1] will-change-transform">
+		<div class="font-agn text-h6 text-beige uppercase m-11 leading-[1] will-change-transform">
 			<?= $text; ?>
 		</div>
 

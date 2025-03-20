@@ -17,7 +17,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 
 ?>
 
-<div class="mx-8 lg:mx-16 relative">
+<div class="px-8 lg:px-16 relative">
 
 	<!-- Image -->
 	<div class=" <?= $size; ?> overflow-hidden rounded-[10px] js-element-blurin relative z-0 js-image-star-highlight-image">

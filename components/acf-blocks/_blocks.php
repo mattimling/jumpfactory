@@ -33,6 +33,9 @@ elseif ( get_row_layout() == 'the_team' ) :
 elseif ( get_row_layout() == 'opening_times' ) :
 	get_template_part( 'components/acf-blocks/opening-times' );
 
+elseif ( get_row_layout() == 'faq' ) :
+	get_template_part( 'components/acf-blocks/faq' );
+
 endif;
 
 ?>

@@ -22,7 +22,7 @@ $text = get_sub_field( 'text' );
 	<!-- The Team -->
 	<?php if ( have_rows( 'members' ) ) : ?>
 
-		<div class="flex flex-wrap gap-x-8 lg:gap-x-16 gap-y-32">
+		<div class="flex flex-wrap gap-x-8 lg:gap-x-16 gap-y-16 lg:gap-y-32">
 
 			<?php while ( have_rows( 'members' ) ) :
 				the_row();
