@@ -15,17 +15,17 @@
 
 		?>
 
-		<div class="absolute top-0 left-0 w-full p-8 grid grid-cols-12 gap-x-16 <?= $text; ?> <?= $path; ?> <?= $class; ?>">
+		<div class="absolute top-0 left-0 w-full p-8 grid grid-cols-12 lg:gap-x-16 <?= $text; ?> <?= $path; ?> <?= $class; ?>">
 
 			<!-- Location -->
 			<div class="col-span-4 flex">
 
 				<a href="#" class="flex self-start gap-x-2 items-center">
-					<div class="w-[15px]">
+					<div class="w-[20px]">
 						<?= $location_icon; ?>
 					</div>
 
-					<div class="font-agn text-[18px] leading-[0.8] relative top-[2px]">
+					<div class="font-agn text-[18px] leading-[0.8] relative top-[2px] max-lg:hidden">
 						<?= $location_name; ?>
 					</div>
 				</a>

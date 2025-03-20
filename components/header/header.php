@@ -26,7 +26,7 @@ $preloader = is_localhost() ? 0 : 0;
 	if ( is_localhost() ) {
 		get_template_part( 'components/dev/tailwind-breakpoints' );
 
-		get_template_part( 'components/dev/menu' );
+		// get_template_part( 'components/dev/menu' );
 	}
 
 	// Preloader only if preloader = true
