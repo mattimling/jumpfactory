@@ -15,7 +15,7 @@ $text_color = $colors[ $highlight_color ] ?? 'text-red';
 <div class="overflow-hidden js-element-blurin">
 
 	<!-- Info -->
-	<div class="bg-charcoal text-beige text-[14px] p-8 lg:p-16 grid grid-cols-12 gap-x-16 gap-y-16">
+	<div class="bg-charcoal text-beige text-[14px] p-8 lg:p-16 grid grid-cols-12 lg:gap-x-16 gap-y-16">
 
 		<!-- 1 -->
 		<div class="col-span-12 md:col-span-6 xl:col-span-4 flex flex-col gap-y-5 max-xl:order-1">
