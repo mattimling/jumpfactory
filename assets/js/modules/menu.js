@@ -76,6 +76,7 @@ function openSubmenu() {
 
         // Check if clicked element is a top-level `<a>` inside `.menu-item-has-children`
         const menuItem = self.closest("li.menu-item-has-children");
+
         if (!menuItem || self.tagName !== "A" || self.closest(".sub-menu")) return;
 
         event.preventDefault(); // Prevent default link behavior
@@ -104,3 +105,31 @@ function openSubmenu() {
 }
 
 openSubmenu();
+
+function activeMenuItem() {
+
+    document.addEventListener("click", (event) => {
+        const self = event.target;
+        const menu = self.closest('.js-main-menu');
+
+        if (menu) {
+
+            const menuItem = menu.querySelector('a');
+
+            if (menuItem) {
+
+                menu.querySelectorAll('a').forEach(item => {
+                    item.classList.remove('is-active');
+                });
+
+                self.classList.toggle('is-active');
+
+            };
+
+        }
+
+    });
+
+}
+
+activeMenuItem();
