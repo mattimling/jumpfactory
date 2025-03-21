@@ -39,6 +39,9 @@ elseif ( get_row_layout() == 'faq' ) :
 elseif ( get_row_layout() == 'image_slider' ) :
 	get_template_part( 'components/acf-blocks/image-slider' );
 
+elseif ( get_row_layout() == 'news' ) :
+	get_template_part( 'components/acf-blocks/news' );
+
 endif;
 
 ?>
