@@ -57,6 +57,7 @@ function barbaPageTransition() {
             ifFunctionExist('footerLogo');
             ifFunctionExist('buttonHover');
             ifFunctionExist('toggleFaq');
+            ifFunctionExist('imageSlider');
         }, 100);
 
     }

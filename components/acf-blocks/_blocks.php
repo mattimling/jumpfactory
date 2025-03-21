@@ -36,6 +36,9 @@ elseif ( get_row_layout() == 'opening_times' ) :
 elseif ( get_row_layout() == 'faq' ) :
 	get_template_part( 'components/acf-blocks/faq' );
 
+elseif ( get_row_layout() == 'image_slider' ) :
+	get_template_part( 'components/acf-blocks/image-slider' );
+
 endif;
 
 ?>

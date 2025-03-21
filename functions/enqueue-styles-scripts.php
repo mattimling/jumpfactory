@@ -49,6 +49,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'footer-logo',
 		'button-hover',
 		'toggle-faq',
+		'image-slider',
 	];
 
 	// Define External JS files to enqueue
