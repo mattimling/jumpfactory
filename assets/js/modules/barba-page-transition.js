@@ -56,6 +56,7 @@ function barbaPageTransition() {
             ifFunctionExist('starHighlight');
             ifFunctionExist('footerLogo');
             ifFunctionExist('buttonHover');
+            ifFunctionExist('toggleFaq');
         }, 100);
 
     }
