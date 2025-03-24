@@ -34,6 +34,17 @@ function mi_get_image( $image_id, $size, $class, $lazy = 'lazy' ) {
 
 function mi_get_icon( $icon, $class = '' ) {
 
-	return get_template_part( 'components/icons/' . $icon, null, array( 'class' => $class ) );
+	ob_start();
+
+	get_template_part( 'components/icons/' . $icon );
+
+	$icon_svg = ob_get_clean();
+
+	if ( $class ) {
+		// Add class to the first <svg> tag in the file
+		$icon_svg = preg_replace( '/<svg([^>]+)>/', '<svg$1 class="' . esc_attr( $class ) . '">', $icon_svg, 1 );
+	}
+
+	return $icon_svg;
 
 }
