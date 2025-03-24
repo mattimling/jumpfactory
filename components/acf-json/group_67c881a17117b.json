@@ -1307,6 +1307,29 @@
                                     "parent_repeater": "field_67dd4d2e36f43"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_67e19b11d5360",
+                            "label": "Scroll Speed",
+                            "name": "scroll_speed",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "The higher, the faster.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -1345,5 +1368,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742556634
+    "modified": 1742838791
 }

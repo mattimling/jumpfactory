@@ -50,6 +50,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'button-hover',
 		'toggle-faq',
 		'image-slider',
+		'auto-scroll-news',
 	];
 
 	// Define External JS files to enqueue
