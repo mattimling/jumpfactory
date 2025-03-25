@@ -45,6 +45,9 @@ elseif ( get_row_layout() == 'news' ) :
 elseif ( get_row_layout() == 'location' ) :
 	get_template_part( 'components/acf-blocks/location' );
 
+elseif ( get_row_layout() == 'price_list' ) :
+	get_template_part( 'components/acf-blocks/price-list' );
+
 endif;
 
 ?>
