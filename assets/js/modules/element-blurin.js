@@ -9,8 +9,8 @@ function elementBlurin() {
         const rect = element.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
         const maxBlur = 15;
-        const blurDistance = viewportHeight / 4; // Distance over which blur fades
-        const transformDistance = viewportHeight / 2; // Distance over which element will translate
+        const blurDistance = viewportHeight / 5; // Distance over which blur fades
+        const transformDistance = viewportHeight / 4; // Distance over which element will translate
 
         // Calculate opacity and transform progress
         const opacityProgress = Math.min(Math.max(0, viewportHeight - rect.top) / blurDistance, 1);
@@ -22,7 +22,7 @@ function elementBlurin() {
         // Calculate blur, opacity, and transform (translation)
         const blurAmount = maxBlur * (1 - opacityProgress); // Interpolates from 15px to 0px
         const opacityAmount = opacityProgress; // Interpolates from 0 to 1
-        const translateAmount = 75 * (1 - transformProgress); // Moves from translateY(30px) to translateY(0)
+        const translateAmount = 50 * (1 - transformProgress); // Moves from translateY(30px) to translateY(0)
 
         // Apply styles to the element
         // element.style.filter = `blur(${blurAmount}px)`;
