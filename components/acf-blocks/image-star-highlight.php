@@ -47,7 +47,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 
 		?>
 
-		<div class="absolute <?= $position; ?>">
+		<div class="absolute <?= $position; ?> max-lg:hidden">
 
 			<?php get_template_part( 'components/acf-blocks/_star_highlight', null, array(
 				'text' => $star_highlight_text,

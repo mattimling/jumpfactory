@@ -19,7 +19,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 
 	<div class="relative z-[1] text-beige flex flex-col h-full justify-between">
 
-		<h3 class="text-h2 pt-24 pb-16 lg:py-32 xl:py-48 2xl:max-w-[70vw]">
+		<h3 class="text-h2 pt-8 md:pt-16 pb-16 lg:py-32 xl:py-48 2xl:max-w-[70vw]">
 			<?= $title; ?>
 		</h3>
 
@@ -49,7 +49,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 	<!-- Star Highlight -->
 	<?php if ( $star_highlight_text ) : ?>
 
-		<div class="absolute -top-16 right-8 overflow-hidden js-element-blurin">
+		<div class="absolute -top-16 right-8 overflow-hidden js-element-blurin max-lg:hidden">
 
 			<?php get_template_part( 'components/acf-blocks/_star_highlight', null, array(
 				'text' => $star_highlight_text,
