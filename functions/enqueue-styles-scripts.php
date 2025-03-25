@@ -51,6 +51,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'toggle-faq',
 		'image-slider',
 		'auto-scroll-news',
+		'location-map',
 	];
 
 	// Define External JS files to enqueue

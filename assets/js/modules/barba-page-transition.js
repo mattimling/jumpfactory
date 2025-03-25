@@ -59,6 +59,7 @@ function barbaPageTransition() {
             ifFunctionExist('toggleFaq');
             ifFunctionExist('imageSlider');
             ifFunctionExist('autoScrollNews');
+            ifFunctionExist('locationMap');
         }, 100);
 
     }

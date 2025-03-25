@@ -42,6 +42,9 @@ elseif ( get_row_layout() == 'image_slider' ) :
 elseif ( get_row_layout() == 'news' ) :
 	get_template_part( 'components/acf-blocks/news' );
 
+elseif ( get_row_layout() == 'location' ) :
+	get_template_part( 'components/acf-blocks/location' );
+
 endif;
 
 ?>
