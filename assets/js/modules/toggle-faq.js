@@ -1,24 +1,21 @@
 function toggleFaq() {
-    const toggles = document.querySelectorAll(".js-faq-toggle");
+    document.querySelectorAll(".js-faq").forEach((faq) => {
+        const toggle = faq.querySelector(".js-faq-toggle");
+        const content = faq.querySelector(".js-faq-content");
 
-    toggles.forEach(toggle => {
+        if (!toggle || !content) return;
+
         toggle.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-
-            if (!content) return;
-
             const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
 
-            // Close all other open FAQ items (optional)
-            document.querySelectorAll(".js-faq-content").forEach(item => {
-                if (item !== content) {
-                    item.style.maxHeight = "0px";
-                }
-            });
+            // Close all other FAQs in the same group
+            faq.parentElement.querySelectorAll(".js-faq").forEach((otherFaq) => {
+                const otherContent = otherFaq.querySelector(".js-faq-content");
+                const otherToggle = otherFaq.querySelector(".js-faq-toggle");
 
-            document.querySelectorAll(".js-faq-toggle").forEach(item => {
-                if (item !== this) {
-                    item.classList.remove("is-active");
+                if (otherContent !== content) {
+                    otherContent.style.maxHeight = "0px";
+                    otherToggle.classList.remove("is-active");
                 }
             });
 
@@ -33,15 +30,25 @@ function toggleFaq() {
         });
     });
 
-    // Check if js-faq has class js-faq-open, and if so, simulate a click on the first item
-    const firstFaq = document.querySelector(".js-faq-open");
-
-    if (firstFaq && firstFaq.classList.contains("js-faq-open")) {
-        const firstToggle = firstFaq.querySelector(".js-faq-toggle");
-        if (firstToggle) {
-            firstToggle.click(); // Simulate a click on the first toggle to open it
+    // Auto-open the first `.js-faq-open` in each section
+    document.querySelectorAll(".js-faq-open").forEach((faq, index) => {
+        if (index === 0) { // Ensure only the first one is clicked
+            const firstToggle = faq.querySelector(".js-faq-toggle");
+            if (firstToggle) {
+                firstToggle.click();
+            }
         }
-    }
+    });
+
+    // Recalculate max-height on window resize
+    window.addEventListener("resize", () => {
+        document.querySelectorAll(".js-faq-content").forEach((content) => {
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
 }
 
+// Initialize the function
 toggleFaq();
