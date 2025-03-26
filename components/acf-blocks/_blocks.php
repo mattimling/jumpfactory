@@ -48,6 +48,9 @@ elseif ( get_row_layout() == 'location' ) :
 elseif ( get_row_layout() == 'price_list' ) :
 	get_template_part( 'components/acf-blocks/price-list' );
 
+elseif ( get_row_layout() == 'offers' ) :
+	get_template_part( 'components/acf-blocks/offers' );
+
 endif;
 
 ?>

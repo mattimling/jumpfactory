@@ -5,7 +5,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 
 ?>
 
-<div class="px-8 lg:px-16 grid grid-cols-12 lg:gap-x-16 gap-y-16">
+<div class="px-8 lg:px-16 grid grid-cols-12 lg:gap-x-16 gap-y-16 js-location-group">
 
 	<div class="col-span-12 lg:col-span-6 relative flex flex-col justify-end gap-y-5 z-[1]">
 

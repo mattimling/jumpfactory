@@ -36,13 +36,13 @@
 							$link = get_sub_field( 'link' );
 							?>
 
-							<a href="<?= ($link && $link['url']) ? $link['url'] : '#';?>" class="relative uppercase text-[15px] group lg:h-[44px]">
+							<a href="<?= ( $link && $link['url'] ) ? $link['url'] : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px]">
 
-								<div class="px-5 py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-2 border-blue">
+								<div class="px-5 py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-[3px] border-blue">
 									<?= $title; ?>
 								</div>
-                                
-                                <div class="relative lg:-top-full left-0 bg-blue text-beige w-full text-center px-5 py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-blue h-[44px]">
+
+								<div class="relative lg:-top-full left-0 bg-blue text-beige w-full text-center px-5 py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[3px] border-blue h-[46px] lg:-mt-[2px] flex justify-center items-center">
 									<?= $hover_text; ?>
 								</div>
 
