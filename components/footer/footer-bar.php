@@ -1,5 +1,6 @@
 <?php
 
+$top_decoration = get_field( 'top_decoration', 'options' );
 $highlight_color = get_field( 'highlight_color', 'options' );
 
 $colors = [ 
@@ -12,10 +13,22 @@ $text_color = $colors[ $highlight_color ] ?? 'text-red';
 
 ?>
 
-<div class="overflow-hidden js-element-blurin">
+<!-- Footer -->
+<div class="overflow-hidden relative js-element-blurin">
+
+	<!-- Top Decoration -->
+	<?php if ( $top_decoration ) : ?>
+
+		<div class="px-8 lg:px-16 translate-y-1/3 relative z-0">
+
+			<?= $top_decoration; ?>
+
+		</div>
+
+	<?php endif; ?>
 
 	<!-- Info -->
-	<div class="bg-charcoal text-beige text-[14px] p-8 lg:p-16 grid grid-cols-12 lg:gap-x-16 gap-y-16">
+	<div class="bg-charcoal text-beige text-[14px] p-8 lg:p-16 grid grid-cols-12 lg:gap-x-16 gap-y-16 relative z-[1]">
 
 		<!-- 1 -->
 		<div class="col-span-12 md:col-span-6 xl:col-span-4 flex flex-col gap-y-5 max-xl:order-1">
@@ -270,7 +283,7 @@ $text_color = $colors[ $highlight_color ] ?? 'text-red';
 			$copyright = get_sub_field( 'copyright' );
 			?>
 
-			<div class="bg-charcoal text-beige p-8 text-[14px] uppercase flex flex-col gap-y-5">
+			<div class="bg-charcoal text-beige p-8 text-[14px] uppercase flex flex-col gap-y-5 relative z-[2]">
 
 				<!-- Footer logo + star highlight -->
 				<a href="#" class="relative js-footer-logo" onclick="event.preventDefault(); lenis.scrollTo(0, { duration: 1, easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2 });">
