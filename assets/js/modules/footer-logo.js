@@ -43,7 +43,7 @@ function footerLogo() {
     function handleMouseMove(event) {
         const rect = logo.getBoundingClientRect();
         targetX = event.clientX - rect.left - rect.width / 2;
-        targetY = event.clientY - rect.top - rect.height / 2;
+        // targetY = event.clientY - rect.top - rect.height / 2;
 
         if (!isAnimating) {
             isAnimating = true;
