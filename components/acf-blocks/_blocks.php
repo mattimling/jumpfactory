@@ -51,6 +51,9 @@ elseif ( get_row_layout() == 'price_list' ) :
 elseif ( get_row_layout() == 'offers' ) :
 	get_template_part( 'components/acf-blocks/offers' );
 
+elseif ( get_row_layout() == 'contact_form' ) :
+	get_template_part( 'components/acf-blocks/contact-form' );
+
 endif;
 
 ?>

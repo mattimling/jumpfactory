@@ -1829,6 +1829,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67e3c0f66c172": {
+                    "key": "layout_67e3c0f66c172",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67e3c1046c174",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1863,5 +1894,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742911509
+    "modified": 1742979339
 }
