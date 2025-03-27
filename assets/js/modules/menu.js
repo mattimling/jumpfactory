@@ -107,29 +107,48 @@ function openSubmenu() {
 openSubmenu();
 
 function activeMenuItem() {
-
     document.addEventListener("click", (event) => {
         const self = event.target;
         const menu = self.closest('.js-main-menu');
 
         if (menu) {
-
-            const menuItem = menu.querySelector('a');
+            // Ensure the clicked element is an <a> inside the menu
+            const menuItem = self.closest('a[href]');
 
             if (menuItem) {
+                const href = menuItem.getAttribute('href');
 
-                menu.querySelectorAll('a').forEach(item => {
-                    item.classList.remove('is-active');
-                });
+                // Only proceed if href does not contain "#"
+                if (!href.includes('#')) {
+                    // Remove active classes from all menu items
+                    menu.querySelectorAll('a').forEach(item => {
+                        item.classList.remove('is-active');
+                    });
 
-                self.classList.toggle('is-active');
+                    menu.querySelectorAll('li').forEach(item => {
+                        item.classList.remove('current-menu-parent', 'current_page_item');
+                    });
 
-            };
+                    // Add is-active class to the clicked <a>
+                    menuItem.classList.add('is-active');
 
+                    // Check if the clicked <a> has a parent with class "menu-item-has-children"
+                    const parentLi = menuItem.closest('.menu-item-has-children');
+
+                    if (parentLi) {
+                        // Find the parent <a> and add is-active to it
+                        const parentA = parentLi.querySelector('a');
+                        if (parentA) {
+                            parentA.classList.add('is-active');
+                        }
+                    }
+                }
+            }
         }
-
     });
-
 }
+
+
+
 
 activeMenuItem();

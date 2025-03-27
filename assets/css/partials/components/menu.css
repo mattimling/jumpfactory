@@ -7,15 +7,13 @@
 }
 
 .main-menu a {
-  @apply lg:-translate-x-16 lg:hover:translate-x-2 transition-all duration-300 ease-in-out relative overflow-hidden;
+  @apply hover-opacity;
 }
 
+.main-menu .current-menu-parent > a,
+.main-menu .current_page_item > a,
 .main-menu a.is-active {
-  @apply translate-x-2;
-}
-
-.main-menu a:before {
-  @apply content-['/'] mr-5;
+  @apply opacity-60;
 }
 
 .main-menu .sub-menu {
