@@ -12,7 +12,7 @@
 				?>
 
 				<div class="!w-[85%] lg:!w-[66.47%] shrink-0 aspect-[904/596] h-full swiper-slide mx-2 lg:mx-8 relative">
-					<?= mi_get_image( $image, 'large', 'w-full h-full object-cover rounded-[10px] overflow-hidden' ) ?>
+					<?= mi_get_image( $image, 'xl', 'w-full h-full object-cover rounded-[10px] overflow-hidden' ) ?>
 
 					<div class="absolute bottom-4 lg:bottom-8 left-4 lg:left-8 text-h3 text-beige">
 						<?= $title; ?>
