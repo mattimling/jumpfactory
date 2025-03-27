@@ -7,7 +7,7 @@ $image = get_sub_field( 'image' );
 
 ?>
 
-<div class="px-8 lg:px-16 grid grid-cols-12 gap-x-16 gap-y-16">
+<div class="px-8 lg:px-16 grid grid-cols-12 lg:gap-x-16 gap-y-16">
 
 	<div class="col-span-12 lg:col-span-7 2xl:col-span-5 flex flex-col justify-between gap-y-16">
 
