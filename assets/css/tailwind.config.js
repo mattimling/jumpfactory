@@ -40,6 +40,7 @@ module.exports = {
 			'lightBlue': '#5C95ED',
 			'red': '#DF0D29',
 			'beige': '#EEE9D2',
+			'darkBeige': '#CBC6AD',
 		},
 	},
 	plugins: [
