@@ -17,7 +17,7 @@ function barbaPageTransition() {
             opacity: [1, 0],
             // marginTop: [0, -transitionY],
             translateY: [0, -transitionY],
-            filter: ['blur(0px)', 'blur(5px)'],
+            // filter: ['blur(0px)', 'blur(5px)'],
             easing: transitionEasing,
             duration: transitionDelay,
         });
@@ -37,7 +37,7 @@ function barbaPageTransition() {
             opacity: [0, 1],
             // marginTop: [transitionY, 0],
             translateY: [transitionY, 0],
-            filter: ['blur(5px)', 'blur(0px)'],
+            // filter: ['blur(5px)', 'blur(0px)'],
             easing: transitionEasing,
             duration: transitionDelay,
             complete: function () {
@@ -74,17 +74,22 @@ function barbaPageTransition() {
         timeout: 10000,
         transitions: [{
             async leave(data) {
+
                 const done = this.async();
                 to(data);
                 await delay((transitionDelay));
                 done();
+
             },
 
             async enter(data) {
+
                 ti(data);
+
             },
 
             async once(data) {
+
             },
         },],
         prevent: ({ el }) => el.classList && el.classList.contains('_brb-prv')
