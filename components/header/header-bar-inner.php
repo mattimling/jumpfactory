@@ -20,7 +20,7 @@
 			<!-- Location -->
 			<div class="col-span-4 flex">
 
-				<a href="#" class="flex self-start gap-x-2 items-center">
+				<a href="#" class="flex self-start gap-x-2 items-center hover-opacity">
 					<div class="w-[20px]">
 						<?= $location_icon; ?>
 					</div>
@@ -35,7 +35,7 @@
 			<!-- Logo -->
 			<div class="col-span-4 flex justify-center">
 
-				<a href="<?= home_url( '/' ) ?>" class="w-[50px]">
+				<a href="<?= home_url( '/' ) ?>" class="w-[50px] hover-opacity">
 					<?= $main_logo; ?>
 				</a>
 
@@ -44,7 +44,7 @@
 			<!-- Menu -->
 			<div class="col-span-4 flex justify-end">
 
-				<a href="#" class="w-[29px] js-hb-menu prevent-children relative">
+				<a href="#" class="w-[29px] js-hb-menu prevent-children relative hover-opacity">
 
 					<span class="absolute top-0 left-0 js-hb-menu-open transition-opacity duration-1000">
 						<?= $menu_logo; ?>

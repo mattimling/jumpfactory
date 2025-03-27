@@ -1,12 +1,12 @@
 <?php
 
-$preloader = is_localhost() ? 0 : 0;
+$preloader = is_localhost() ? 1 : 1;
 
 ?>
 
 <!doctype html>
 
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style="background-color: #EEE9D2;" <?= $preloader ? 'style="opacity: 0; overflow: hidden;"' : ''; ?>>
 
 <head>
 	<meta name="author" content="EmeleCollab">
@@ -18,7 +18,7 @@ $preloader = is_localhost() ? 0 : 0;
 
 <?php $body_classes = 'font-pjs text-body select-none text-charcoal bg-beige'; ?>
 
-<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> style="<?= $preloader ? 'opacity: 0;' : ''; ?>">
+<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> style="opacity: 0;">
 
 	<?php
 
@@ -38,13 +38,13 @@ $preloader = is_localhost() ? 0 : 0;
 	get_template_part( 'components/global/preload-media' );
 
 	// Page transition
-	get_template_part( 'components/global/page-transition' );
+	// get_template_part( 'components/global/page-transition' );
 
 	?>
 
 	<?php get_template_part( 'components/header/header-bar' ); ?>
 
-	<div class="page-wrapper js-page-wrapper" style="<?= $preloader ? 'display: none;' : ''; ?>">
+	<div class="page-wrapper js-page-wrapper" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
 		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>">
 
