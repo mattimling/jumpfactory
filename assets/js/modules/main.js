@@ -1,5 +1,5 @@
 // Signature
-console.log('%c Matt Imling .com ', 'font-family:Arial, sans-serif; font-weight:600; color:#fff; background: #000; font-size:15px; text-transform: uppercasec; padding: 20px 40px; width: 100%;');
+console.log('%c emelecollab.com ', 'font-family:Arial, sans-serif; font-weight:600; color:#fff; background: #000; font-size:15px; text-transform: uppercasec; padding: 20px 40px; width: 100%;');
 
 // Constants.
 const html = document.querySelector('html');
