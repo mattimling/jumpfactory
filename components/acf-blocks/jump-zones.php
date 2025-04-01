@@ -14,7 +14,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 	<!-- Map-->
 	<?php if ( have_rows( 'zones' ) ) : ?>
 
-		<div class="relative mb-8">
+		<div class="relative mb-8 js-element-blurin">
 
 			<?php $first = true; ?>
 
@@ -48,7 +48,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 	<!-- Buttons -->
 	<?php if ( have_rows( 'zones' ) ) : ?>
 
-		<div class="px-8 lg:px-16 flex gap-8 justify-center flex-wrap">
+		<div class="px-8 lg:px-16 flex gap-8 justify-center flex-wrap js-element-blurin">
 
 			<?php while ( have_rows( 'zones' ) ) :
 				the_row();

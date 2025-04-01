@@ -1,4 +1,9 @@
 function elementBlurin() {
+    // Only run if the screen width is greater than 768px (desktop)
+    if (window.innerWidth <= 1024) {
+        return;
+    }
+
     const elements = document.querySelectorAll('.js-element-blurin, .js-element-blurin-scale');
     const childrenElements = document.querySelectorAll('.js-element-blurin-children > *');
 
@@ -25,7 +30,7 @@ function elementBlurin() {
         const translateAmount = 50 * (1 - transformProgress); // Moves from translateY(30px) to translateY(0)
 
         // Apply styles to the element
-        // element.style.filter = `blur(${blurAmount}px)`;
+        // element.style.filter = `blur(${blurAmount}px)`; // Un-comment if you want to apply blur
         element.style.opacity = opacityAmount;
         element.style.transform = `translateY(${translateAmount}px)`;
     }
