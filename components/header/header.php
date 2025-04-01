@@ -18,7 +18,7 @@ $preloader = is_localhost() ? 1 : 1;
 
 <?php $body_classes = 'font-pjs text-body select-none text-charcoal bg-beige'; ?>
 
-<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> style="opacity: 0;">
+<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
 	<?php
 
@@ -39,7 +39,7 @@ $preloader = is_localhost() ? 1 : 1;
 
 	// Page transition
 	// get_template_part( 'components/global/page-transition' );
-
+	
 	?>
 
 	<?php get_template_part( 'components/header/header-bar' ); ?>
