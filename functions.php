@@ -21,6 +21,7 @@ $required_functions = [
 	'snippets',
 	'theme-settings',
 	'cpt-global-blocks',
+	'clean-video-embed',
 ];
 
 foreach ( $required_functions as $function ) {

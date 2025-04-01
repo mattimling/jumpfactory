@@ -1,7 +1,9 @@
 <?php
 
+$media_type = get_sub_field( 'media_type' );
 $background_image = get_sub_field( 'background_image' );
-$video_link = get_sub_field( 'video_link' );
+$self_hosted_video = get_sub_field( 'self_hosted_video' );
+$embed_video = get_sub_field( 'embed_video' );
 
 $title = get_sub_field( 'title' );
 $subtitle = get_sub_field( 'subtitle' );
@@ -11,37 +13,31 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 
 ?>
 
-
 <div class="w-full h-[100dvh] js-hero relative will-change-transform overflow-hidden">
 
-	<!-- Video / Image -->
-	<?php if ( $video_link ) : ?>
+	<div class="w-full h-full js-hero-media overflow-hidden origin-bottom pointer-events-none">
 
-		<div class="w-full h-full js-hero-media overflow-hidden origin-bottom pointer-events-none">
+		<div class="w-full h-full js-hero-media-inner">
 
-			<div class="w-full h-full js-hero-media-inner">
-
-				<video preload="auto" muted playsinline loop class="w-full h-full object-cover">
-					<source src="<?= $video_link; ?>" type="video/mp4">
-				</video>
-
-			</div>
-
-		</div>
-
-	<?php else : ?>
-
-		<div class="w-full h-full js-hero-media overflow-hidden origin-bottom pointer-events-none">
-
-			<div class="w-full h-full js-hero-media-inner">
+			<?php if ( $media_type == 'Background Image' ) : ?>
 
 				<?= mi_get_image( $background_image, 'xl', 'w-full h-full object-cover' ); ?>
 
-			</div>
+			<?php elseif ( $media_type == 'Self Hosted Video' ) : ?>
+
+				<video preload="auto" muted playsinline loop class="w-full h-full object-cover">
+					<source src="<?= $self_hosted_video; ?>" type="video/mp4">
+				</video>
+
+			<?php elseif ( $media_type == 'Embed Video' ) : ?>
+
+				<?= clean_video_embed( $embed_video ); ?>
+
+			<?php endif; ?>
 
 		</div>
 
-	<?php endif; ?>
+	</div>
 
 	<!-- Title + Subtitle -->
 	<?php if ( $title || $subtitle ) : ?>
