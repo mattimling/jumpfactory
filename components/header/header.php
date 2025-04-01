@@ -42,10 +42,12 @@ $preloader = is_localhost() ? 0 : 1;
 	
 	?>
 
-	<?php get_template_part( 'components/header/header-bar' ); ?>
+
 
 	<div class="page-wrapper js-page-wrapper" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
 		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>">
 
 			<div class="content-wrapper js-content-wrapper">
+
+				<?php get_template_part( 'components/header/header-bar' ); ?>

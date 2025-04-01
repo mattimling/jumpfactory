@@ -22,8 +22,6 @@ function barbaPageTransition() {
             duration: transitionDelay,
         });
 
-        ifFunctionExist('closeMenu');
-
     }
 
     function ti(data) {
@@ -51,6 +49,7 @@ function barbaPageTransition() {
         });
 
         setTimeout(timer => {
+            ifFunctionExist('initMenu', data.next.container);
             ifFunctionExist('hero');
             ifFunctionExist('elementBlurin');
             ifFunctionExist('starHighlight');
@@ -61,6 +60,7 @@ function barbaPageTransition() {
             ifFunctionExist('autoScrollNews');
             ifFunctionExist('locationMap');
             ifFunctionExist('jumpZones');
+            ifFunctionExist('headerColorChange');
         }, 100);
 
     }

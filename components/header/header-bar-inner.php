@@ -1,64 +1,74 @@
-<?php if ( have_rows( 'header', 'options' ) ) : ?>
+<?php if ( have_rows( get_page_or_parent_name(), 'options' ) ) : ?>
 
-	<?php while ( have_rows( 'header', 'options' ) ) :
+	<?php while ( have_rows( get_page_or_parent_name(), 'options' ) ) :
 		the_row();
-
-		$location_icon = get_sub_field( 'location_icon' );
-		$location_name = get_sub_field( 'location_name' );
-		$main_logo = get_sub_field( 'main_logo' );
-		$menu_logo = get_sub_field( 'menu_logo' );
-		$close_logo = get_sub_field( 'close_logo' );
-
-		$text = $args['text'] ?? '';
-		$path = $args['path'] ?? '';
-		$class = $args['class'] ?? '';
-
 		?>
 
-		<div class="absolute top-0 left-0 w-full p-8 grid grid-cols-12 lg:gap-x-16 <?= $text; ?> <?= $path; ?> <?= $class; ?>">
+		<?php if ( have_rows( 'header' ) ) : ?>
 
-			<!-- Location -->
-			<div class="col-span-4 flex">
+			<?php while ( have_rows( 'header' ) ) :
+				the_row();
 
-				<a href="#" class="flex self-start gap-x-2 items-center hover-opacity">
-					<div class="w-[20px]">
-						<?= $location_icon; ?>
+				$location_icon = get_sub_field( 'location_icon' );
+				$location_name = get_sub_field( 'location_name' );
+				$main_logo = get_sub_field( 'main_logo' );
+				$menu_logo = get_sub_field( 'menu_logo' );
+				$close_logo = get_sub_field( 'close_logo' );
+
+				$text = $args['text'] ?? '';
+				$path = $args['path'] ?? '';
+				$class = $args['class'] ?? '';
+
+				?>
+
+				<div class="absolute top-0 left-0 w-full p-8 grid grid-cols-12 lg:gap-x-16 <?= $text; ?> <?= $path; ?> <?= $class; ?>">
+
+					<!-- Location -->
+					<div class="col-span-4 flex">
+
+						<a href="<?= home_url( '/' ) ?>" class="flex self-start gap-x-2 items-center hover-opacity">
+							<div class="w-[20px]">
+								<?= $location_icon; ?>
+							</div>
+
+							<div class="font-agn text-[18px] leading-[0.8] relative top-[2px] max-lg:hidden">
+								<?= $location_name; ?>
+							</div>
+						</a>
+
 					</div>
 
-					<div class="font-agn text-[18px] leading-[0.8] relative top-[2px] max-lg:hidden">
-						<?= $location_name; ?>
+					<!-- Logo -->
+					<div class="col-span-4 flex justify-center">
+
+						<a href="<?= get_page_or_parent_name() ? get_permalink( wp_get_post_parent_id( get_queried_object()->ID ) ) : home_url( '/' ) ?>" class="w-[50px] hover-opacity">
+							<?= $main_logo; ?>
+						</a>
+
 					</div>
-				</a>
 
-			</div>
+					<!-- Menu -->
+					<div class="col-span-4 flex justify-end">
 
-			<!-- Logo -->
-			<div class="col-span-4 flex justify-center">
+						<a href="#" class="w-[29px] js-hb-menu prevent-children relative hover-opacity">
 
-				<a href="<?= home_url( '/' ) ?>" class="w-[50px] hover-opacity">
-					<?= $main_logo; ?>
-				</a>
+							<span class="absolute top-0 left-0 js-hb-menu-open transition-opacity duration-1000">
+								<?= $menu_logo; ?>
+							</span>
 
-			</div>
+							<span class="absolute top-0 left-0 js-hb-menu-close transition-opacity duration-1000 opacity-0">
+								<?= $close_logo; ?>
+							</span>
 
-			<!-- Menu -->
-			<div class="col-span-4 flex justify-end">
+						</a>
 
-				<a href="#" class="w-[29px] js-hb-menu prevent-children relative hover-opacity">
+					</div>
 
-					<span class="absolute top-0 left-0 js-hb-menu-open transition-opacity duration-1000">
-						<?= $menu_logo; ?>
-					</span>
+				</div>
 
-					<span class="absolute top-0 left-0 js-hb-menu-close transition-opacity duration-1000 opacity-0">
-						<?= $close_logo; ?>
-					</span>
+			<?php endwhile; ?>
 
-				</a>
-
-			</div>
-
-		</div>
+		<?php endif; ?>
 
 	<?php endwhile; ?>
 

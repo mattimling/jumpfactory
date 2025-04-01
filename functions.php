@@ -22,6 +22,8 @@ $required_functions = [
 	'theme-settings',
 	'cpt-global-blocks',
 	'clean-video-embed',
+	'acf-add-menu',
+	'get-page-or-parent-name',
 ];
 
 foreach ( $required_functions as $function ) {
