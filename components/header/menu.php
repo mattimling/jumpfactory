@@ -38,11 +38,35 @@
 
 				add_filter( 'walker_nav_menu_start_el', 'add_submenu_toggle_span', 10, 4 );
 
-				wp_nav_menu( array(
-					'menu_class' => 'main-menu js-main-menu'
-				) );
-
 				?>
+
+				<div class="">
+
+					<?php
+
+					wp_nav_menu( array(
+						'menu_class' => 'main-menu js-main-menu'
+					) );
+
+					?>
+
+					<div class="text-h4 text-beige flex gap-x-8 mt-6 lg:mt-12 ml-1 [&_.is-active]:opacity-60">
+
+						<a href="#" class="hover-opacity">
+							DE
+						</a>
+
+						<a href="#" class="is-active hover-opacity">
+							EN
+						</a>
+
+						<a href="#" class="hover-opacity">
+							FR
+						</a>
+
+					</div>
+
+				</div>
 
 				<?php get_template_part( 'components/acf-blocks/_star_highlight', null, array(
 					'text' => $star_highlight_text,
