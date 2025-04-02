@@ -35,6 +35,18 @@ function openSubmenu() {
         const subMenu = menuItem.querySelector('.sub-menu');
         const plusSign = menuItem.querySelector('.js-submenu-plus');
 
+        // Close all other submenus
+        document.querySelectorAll('.sub-menu').forEach(menu => {
+            if (menu !== subMenu) {
+                menu.style.maxHeight = '0px';
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                const otherPlus = menu.closest('li.menu-item-has-children').querySelector('.js-submenu-plus');
+                if (otherPlus) otherPlus.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Toggle the clicked submenu
         if (subMenu) {
             const isOpen = subMenu.style.maxHeight && subMenu.style.maxHeight !== '0px';
             if (isOpen) {
