@@ -33,7 +33,9 @@ $title = get_sub_field( 'title' );
 
 							<div class="py-8 will-change-transform">
 
-								<?= $text; ?>
+								<div class="body-links-small">
+									<?= $text; ?>
+								</div>
 
 								<?php if ( have_rows( 'prices' ) ) : ?>
 
