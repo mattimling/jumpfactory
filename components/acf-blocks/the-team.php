@@ -47,9 +47,23 @@ $text = get_sub_field( 'text' );
 						<?= $text; ?>
 					</div>
 
-					<div class="text-h5 font-bold body-links">
-						<?= mi_get_link( $email, '' ); ?>
-					</div>
+					<?php if ( have_rows( 'emails' ) ) : ?>
+
+						<div class="text-h5 font-bold body-links flex flex-col gap-y-1">
+
+							<?php while ( have_rows( 'emails' ) ) :
+								the_row();
+
+								$email = get_sub_field( 'email' );
+								?>
+
+								<?= mi_get_link( $email, '' ); ?>
+
+							<?php endwhile; ?>
+
+						</div>
+
+					<?php endif; ?>
 
 				</div>
 
