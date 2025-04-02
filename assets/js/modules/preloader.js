@@ -18,15 +18,13 @@ function preloader() {
 
             const prelTransitionDelay = 500,
                 prelTransitionEasing = 'easeOutCubic',
-                prelTransitionY = 30;
+                prelTransitionY = 10;
 
             // Load body
             anime({
                 targets: body,
                 opacity: [0, 1],
-                // marginTop: [transitionY, 0],
                 translateY: [prelTransitionY, 0],
-                // filter: ['blur(5px)', 'blur(0px)'],
                 easing: prelTransitionEasing,
                 duration: prelTransitionDelay,
                 complete: function () {
@@ -39,20 +37,19 @@ function preloader() {
             anime({
                 targets: document.querySelector('.js-page-wrapper'),
                 opacity: [0, 1],
-                // marginTop: [transitionY, 0],
                 translateY: [prelTransitionY, 0],
-                // filter: ['blur(5px)', 'blur(0px)'],
                 easing: prelTransitionEasing,
                 duration: prelTransitionDelay,
                 complete: function () {
                     lenis.start();
 
                     document.querySelector('.js-page-wrapper').style.transform = '';
+
                 }
             });
 
 
-        }, 1500);
+        }, 1000);
 
     }
 

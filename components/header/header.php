@@ -1,12 +1,12 @@
 <?php
 
-$preloader = is_localhost() ? 0 : 1;
+$preloader = is_localhost() ? 1 : 1;
 
 ?>
 
 <!doctype html>
 
-<html <?php language_attributes(); ?> style="background-color: #EEE9D2;" <?= $preloader ? 'style="opacity: 0; overflow: hidden;"' : ''; ?>>
+<html <?php language_attributes(); ?> style="background-color: #EEE9D2; <?= $preloader ? 'overflow: hidden;' : ''; ?>">
 
 <head>
 	<meta name="author" content="EmeleCollab">
@@ -37,14 +37,11 @@ $preloader = is_localhost() ? 0 : 1;
 	// Preload all media
 	get_template_part( 'components/global/preload-media' );
 
-	// Page transition
-	// get_template_part( 'components/global/page-transition' );
-	
 	?>
 
 
 
-	<div class="page-wrapper js-page-wrapper" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
+	<div class="page-wrapper js-page-wrapper relative" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
 		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>">
 

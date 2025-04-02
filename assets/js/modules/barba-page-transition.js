@@ -3,7 +3,7 @@ function barbaPageTransition() {
     const transitionDelay = 500,
         transitionEasing = 'easeOutCubic',
         transitionTarget = document.querySelector('.js-page-wrapper'),
-        transitionY = 30,
+        transitionY = 10,
         delay = (ms = transitionDelay * 2) => new Promise(resolve => setTimeout(resolve, ms));
 
     function to(data) {
@@ -15,12 +15,29 @@ function barbaPageTransition() {
         anime({
             targets: transitionTarget,
             opacity: [1, 0],
-            // marginTop: [0, -transitionY],
-            translateY: [0, -transitionY],
-            // filter: ['blur(0px)', 'blur(5px)'],
+            // translateY: [0, -transitionY],
+            top: [0, -transitionY],
             easing: transitionEasing,
             duration: transitionDelay,
         });
+
+        // Menu fadeOut
+        menuOpen = document.querySelector('.js-menu.is-open');
+
+        if (menuOpen) {
+
+            menuOpen.classList.remove('transition-all', 'duration-700');
+
+            anime({
+                targets: document.querySelector('.js-menu'),
+                // opacity: [1, 0],
+                // translateY: [0, -transitionY],
+                top: [0, -transitionY],
+                easing: transitionEasing,
+                duration: transitionDelay,
+            });
+
+        }
 
     }
 
@@ -33,9 +50,8 @@ function barbaPageTransition() {
         anime({
             targets: transitionTarget,
             opacity: [0, 1],
-            // marginTop: [transitionY, 0],
-            translateY: [transitionY, 0],
-            // filter: ['blur(5px)', 'blur(0px)'],
+            // translateY: [transitionY, 0],
+            top: [transitionY, 0],
             easing: transitionEasing,
             duration: transitionDelay,
             complete: function () {
@@ -49,7 +65,6 @@ function barbaPageTransition() {
         });
 
         setTimeout(timer => {
-            ifFunctionExist('initMenu', data.next.container);
             ifFunctionExist('hero');
             ifFunctionExist('elementBlurin');
             ifFunctionExist('starHighlight');
@@ -61,6 +76,7 @@ function barbaPageTransition() {
             ifFunctionExist('locationMap');
             ifFunctionExist('jumpZones');
             ifFunctionExist('headerColorChange');
+            ifFunctionExist('homeStarMovement');
         }, 100);
 
     }

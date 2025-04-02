@@ -1,5 +1,1 @@
-<div class="js-preloader">
-
-
-
-</div>
+<div class="js-preloader"></div>
