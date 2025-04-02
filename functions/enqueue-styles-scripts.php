@@ -53,6 +53,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'auto-scroll-news',
 		'location-map',
 		'jump-zones',
+		'home-star-movement',
 	];
 
 	// Define External JS files to enqueue
