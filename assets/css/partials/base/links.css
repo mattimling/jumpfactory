@@ -1,3 +1,7 @@
 .body-links a {
   @apply underline decoration-transparent decoration-[3px] transition-all duration-300 hover:decoration-blue;
 }
+
+.body-links-small a {
+  @apply underline decoration-red decoration-[2px] transition-all duration-300 hover:decoration-transparent;
+}

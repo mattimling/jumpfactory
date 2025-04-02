@@ -3,7 +3,7 @@
 }
 
 .main-menu > li > a {
-  @apply text-h2 text-beige inline-flex py-2 lg:py-3;
+  @apply text-h2-2 text-beige inline-flex py-2 lg:py-3;
 }
 
 .main-menu a {
