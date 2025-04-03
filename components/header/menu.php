@@ -24,7 +24,7 @@
 
 				?>
 
-				<div class="fixed -top-full [&.is-open]:top-0 left-0 w-full h-[100dvh] z-10 flex flex-col justify-end will-change-transform transition-all duration-700 ease-custom-in-out js-menu [&.is-open_.js-menu-inner]:opacity-100 <?= $bg_color; ?>">
+				<div class="fixed -top-full invisible [&.is-open]:visible [&.is-open]:top-0 left-0 w-full h-[100dvh] z-10 flex flex-col justify-end will-change-transform transition-all duration-700 ease-custom-in-out js-menu [&.is-open_.js-menu-inner]:opacity-100 <?= $bg_color; ?>">
 
 					<div class="p-8 lg:p-16 flex max-lg:flex-col-reverse max-lg:h-[80%] justify-between lg:items-end will-change-transform opacity-0 js-menu-inner transition-opacity duration-700 ease-custom-in-out">
 
