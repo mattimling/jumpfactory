@@ -1,0 +1,11 @@
+.block-text-content h3 {
+  @apply text-h3 uppercase pb-2;
+}
+
+.block-text-content h4 {
+  @apply text-h4;
+}
+
+.block-text-content ul {
+  @apply list-disc flex flex-col gap-y-2 pl-10;
+}
