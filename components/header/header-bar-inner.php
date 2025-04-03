@@ -30,7 +30,7 @@
 								<?= $location_icon; ?>
 							</div>
 
-							<div class="font-agn text-[18px] leading-[0.8] relative top-[2px] max-lg:hidden">
+							<div class="font-agn text-[18px] leading-[0.8] relative top-[2px] max-lg:hidden uppercase">
 								<?= $location_name; ?>
 							</div>
 						</a>
