@@ -48,7 +48,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 	<!-- Buttons -->
 	<?php if ( have_rows( 'zones' ) ) : ?>
 
-		<div class="px-8 lg:px-16 flex gap-8 justify-center flex-wrap js-element-blurin">
+		<div class="px-8 lg:px-16 flex gap-3 lg:gap-8 justify-center flex-wrap js-element-blurin">
 
 			<?php while ( have_rows( 'zones' ) ) :
 				the_row();
@@ -56,7 +56,7 @@ $star_highlight_position = get_sub_field( 'star_highlight_position' );
 				$title = get_sub_field( 'title' );
 				?>
 
-				<a href="#" class="js-zone-button cursor-pointer px-5 py-3 hover:bg-blue hover:text-beige transition-all duration-300 border-[3px] border-blue uppercase text-[15px] text-blue [&.is-active]:text-beige [&.is-active]:bg-blue" data-zone="<?= sanitize_title( $title ); ?>">
+				<a href="#" class="js-zone-button cursor-pointer px-3 py-1 lg:px-5 lg:py-3 hover:bg-blue hover:text-beige transition-all duration-300 border-[3px] border-blue uppercase text-[13px] lg:text-[15px] text-blue [&.is-active]:text-beige [&.is-active]:bg-blue" data-zone="<?= sanitize_title( $title ); ?>">
 					<?= $title; ?>
 				</a>
 

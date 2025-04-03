@@ -39,7 +39,7 @@ $title = get_sub_field( 'title' );
 
 								<?php if ( have_rows( 'prices' ) ) : ?>
 
-									<div class="flex gap-8 flex-wrap mt-8">
+									<div class="flex gap-3 lg:gap-8 flex-wrap mt-8">
 
 										<?php while ( have_rows( 'prices' ) ) :
 											the_row();
@@ -52,11 +52,11 @@ $title = get_sub_field( 'title' );
 
 											<a href="<?= ( $link && $link['url'] ) ? $link['url'] : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px]">
 
-												<div class="px-5 py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-[3px] border-red">
+												<div class="px-3 py-1 lg:px-5 lg:py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-[3px] border-red">
 													<?= $title; ?>
 												</div>
 
-												<div class="relative lg:-top-full left-0 bg-red text-beige w-full text-center px-5 py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[3px] border-red h-[46px] lg:-mt-[2px] flex justify-center items-center">
+												<div class="relative lg:-top-full left-0 bg-red text-beige w-full text-center px-3 py-1 lg:px-5 lg:py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[3px] border-red lg:h-[46px] lg:-mt-[2px] flex justify-center items-center">
 													<?= $hover_text; ?>
 												</div>
 
