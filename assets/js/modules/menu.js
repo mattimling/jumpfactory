@@ -77,8 +77,8 @@ function toggleMenu() {
             event.preventDefault();
 
             const menu = self.closest('.js-content-wrapper').querySelector('.js-menu');
-            const menuOpen = self.querySelector('.js-hb-menu-open');
-            const menuClose = self.querySelector('.js-hb-menu-close');
+            const menuOpen = document.querySelectorAll('.js-hb-menu-open');
+            const menuClose = document.querySelectorAll('.js-hb-menu-close');
             const hbiOver = self.closest('.js-hbi').querySelector('.js-hbi-over');
             const hbiUnder = self.closest('.js-hbi').querySelector('.js-hbi-under');
             const opacityHidden = '!opacity-0';
@@ -92,8 +92,13 @@ function toggleMenu() {
                 lenis.stop();
 
                 menu.classList.add('is-open');
-                menuOpen.classList.add('opacity-0');
-                menuClose.classList.remove('opacity-0');
+
+                menuOpen.forEach(item => {
+                    item.classList.add('opacity-0');
+                });
+                menuClose.forEach(item => {
+                    item.classList.remove('opacity-0');
+                });
 
                 hbiOver.classList.add(opacityHidden, ...transitionClasses);
                 hbiUnder.classList.add(opacityVisible, ...transitionClasses);
@@ -117,8 +122,14 @@ function toggleMenu() {
                 lenis.start();
 
                 menu.classList.remove('is-open');
-                menuOpen.classList.remove('opacity-0');
-                menuClose.classList.add('opacity-0');
+
+                menuOpen.forEach(item => {
+                    item.classList.remove('opacity-0');
+                });
+                menuClose.forEach(item => {
+                    item.classList.add('opacity-0');
+                });
+
                 hbiOver.classList.remove(opacityHidden);
                 hbiUnder.classList.remove(opacityVisible);
 
