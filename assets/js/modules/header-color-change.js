@@ -1,37 +1,40 @@
 function headerColorChange() {
+    const hbiOverItems = document.querySelectorAll('.js-hbi-over');
+    if (!hbiOverItems.length) return;
 
-    const hbiOver = document.querySelectorAll('.js-hbi-over');
+    const elements = [];
 
-    hbiOver.forEach(item => {
+    hbiOverItems.forEach(item => {
+        const hbiParent = item.closest('.js-hbi.js-hbi-no-hero');
+        if (!hbiParent) return;
+        const hbiUnder = hbiParent.querySelector('.js-hbi-under');
+        if (!hbiUnder) return;
 
-        const hbiUnder = item.closest('.js-hbi').querySelector('.js-hbi-under');
+        elements.push({ item, hbiUnder });
+    });
 
-        if (!hbiOver || !hbiUnder) return;
+    function updateOpacity(scrollY) {
+        elements.forEach(({ item, hbiUnder }) => {
+            const startScroll = 200;
+            const endScroll = 500;
 
-        const startScroll = 200; // Start animation at 200px
-        const endScroll = 500; // Complete animation at 500px
-
-        function updateOpacity(scrollY) {
             if (scrollY < startScroll) {
-                item.style.opacity = 0; // Hidden before 200px
-                hbiUnder.style.opacity = 1; // Ensure hbiUnder is visible
+                item.style.opacity = 0;
+                hbiUnder.style.opacity = 1;
             } else if (scrollY >= endScroll) {
-                item.style.opacity = 1; // Fully visible at 500px
-                hbiUnder.style.opacity = 0; // Fully hidden at 500px
+                item.style.opacity = 1;
+                hbiUnder.style.opacity = 0;
             } else {
                 let opacity = (scrollY - startScroll) / (endScroll - startScroll);
                 item.style.opacity = opacity;
-                hbiUnder.style.opacity = 1 - opacity; // hbiUnder fades out
+                hbiUnder.style.opacity = 1 - opacity;
             }
-        }
-
-        // Listen to Lenis scroll events
-        lenis.on("scroll", ({ scroll }) => {
-            updateOpacity(scroll);
         });
+    }
 
+    lenis.on("scroll", ({ scroll }) => {
+        updateOpacity(scroll);
     });
-
 }
 
 headerColorChange();

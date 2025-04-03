@@ -39,8 +39,6 @@ $preloader = is_localhost() ? 0 : 1;
 
 	?>
 
-
-
 	<div class="page-wrapper js-page-wrapper relative" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
 		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>">

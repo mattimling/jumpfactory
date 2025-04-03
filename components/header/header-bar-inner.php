@@ -18,7 +18,6 @@
 				$text = $args['text'] ?? '';
 				$path = $args['path'] ?? '';
 				$class = $args['class'] ?? '';
-
 				?>
 
 				<div class="absolute top-0 left-0 w-full p-8 grid grid-cols-12 lg:gap-x-16 <?= $text; ?> <?= $path; ?> <?= $class; ?>">
