@@ -42,9 +42,13 @@
 									<?= $title; ?>
 								</div>
 
-								<div class="relative lg:-top-full left-0 bg-blue text-beige w-full text-center px-3 py-1 lg:px-5 lg:py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[3px] border-blue lg:h-[46px] lg:-mt-[2px] flex justify-center items-center">
-									<?= $hover_text; ?>
-								</div>
+								<?php if ( $title != $hover_text ) : ?>
+
+									<div class="relative lg:-top-full left-0 bg-blue text-beige w-full text-center px-3 py-1 lg:px-5 lg:py-3 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[3px] border-blue lg:h-[46px] lg:-mt-[2px] flex justify-center items-center">
+										<?= $hover_text; ?>
+									</div>
+
+								<?php endif; ?>
 
 							</a>
 
