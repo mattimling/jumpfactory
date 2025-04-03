@@ -1,4 +1,4 @@
-function homeStarMovement() {
+function homeStarMovement(time) {
     const logo = document.querySelector('.js-home-logo');
     const star = document.querySelector('.js-home-star');
 
@@ -58,7 +58,22 @@ function homeStarMovement() {
     }
 
     applyHoverEffect();
+
     window.addEventListener('resize', applyHoverEffect);
+
+    // Star movement
+    const starHighlight = document.querySelector('.js-home-star .js-hero-star-static');
+
+    if (starHighlight) {
+        setTimeout(() => {
+            anime({
+                targets: starHighlight,
+                rotate: [0, 135],
+                easing: 'easeInOutCubic',
+                duration: 800,
+            });
+        }, time);
+    }
 }
 
-homeStarMovement();
+homeStarMovement(1000);

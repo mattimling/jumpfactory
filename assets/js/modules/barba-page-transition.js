@@ -76,7 +76,7 @@ function barbaPageTransition() {
             ifFunctionExist('locationMap');
             ifFunctionExist('jumpZones');
             ifFunctionExist('headerColorChange');
-            ifFunctionExist('homeStarMovement');
+            ifFunctionExist('homeStarMovement', 0);
         }, 100);
 
     }
