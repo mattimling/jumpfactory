@@ -1,0 +1,3 @@
+.error-404 h6 {
+  @apply text-h6 hover:text-blue transition-colors duration-300;
+}

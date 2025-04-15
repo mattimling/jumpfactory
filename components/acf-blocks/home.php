@@ -94,7 +94,7 @@ $star_highlight_color = get_field( 'star_highlight_color', $page_id );
 
 			<?php if ( is_404() ) : ?>
 
-				<div class="">
+				<div class="text-center text-h3 error-404">
 					<?= $text; ?>
 				</div>
 
