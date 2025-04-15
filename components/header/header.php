@@ -2,11 +2,14 @@
 
 $preloader = is_localhost() ? 0 : 1;
 
+$general_options = get_field( 'general', 'options' );
+$bg_color = ! empty( $general_options['background_color'] ) ? $general_options['background_color'] : '#EEE9D2';
+
 ?>
 
 <!doctype html>
 
-<html <?php language_attributes(); ?> style="background-color: #EEE9D2; <?= $preloader ? 'overflow: hidden; pointer-events: none;' : ''; ?>">
+<html <?php language_attributes(); ?> style="background-color: <?= $bg_color; ?>; <?= $preloader ? 'overflow: hidden; pointer-events: none;' : ''; ?>">
 
 <head>
 	<meta name="author" content="EmeleCollab">
@@ -16,9 +19,9 @@ $preloader = is_localhost() ? 0 : 1;
 	<?php wp_head(); ?>
 </head>
 
-<?php $body_classes = 'font-pjs text-body select-none text-charcoal bg-beige overflow-x-hidden'; ?>
+<?php $body_classes = 'font-pjs text-body select-none text-charcoal overflow-x-hidden'; ?>
 
-<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
+<body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> <?= $preloader ? 'style="opacity: 0"' : ''; ?> style="<?= $bg_color; ?>">
 
 	<?php
 
