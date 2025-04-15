@@ -22,6 +22,9 @@
 
 					$text_color = $colors[ $highlight_color ] ?? 'text-red';
 
+					echo $highlight_color;
+					echo $text_color;
+
 					?>
 
 					<div class="relative js-element-blurin">

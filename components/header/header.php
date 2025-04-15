@@ -6,7 +6,7 @@ $preloader = is_localhost() ? 0 : 1;
 
 <!doctype html>
 
-<html <?php language_attributes(); ?> style="background-color: #EEE9D2; <?= $preloader ? 'overflow: hidden;' : ''; ?>">
+<html <?php language_attributes(); ?> style="background-color: #EEE9D2; <?= $preloader ? 'overflow: hidden; pointer-events: none;' : ''; ?>">
 
 <head>
 	<meta name="author" content="EmeleCollab">
@@ -16,7 +16,7 @@ $preloader = is_localhost() ? 0 : 1;
 	<?php wp_head(); ?>
 </head>
 
-<?php $body_classes = 'font-pjs text-body select-none text-charcoal bg-beige'; ?>
+<?php $body_classes = 'font-pjs text-body select-none text-charcoal bg-beige overflow-x-hidden'; ?>
 
 <body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
 
@@ -45,4 +45,8 @@ $preloader = is_localhost() ? 0 : 1;
 
 			<div class="content-wrapper js-content-wrapper">
 
-				<?php get_template_part( 'components/header/header-bar' ); ?>
+				<?php if ( ! is_404() ) : ?>
+
+					<?php get_template_part( 'components/header/header-bar' ); ?>
+
+				<?php endif; ?>
