@@ -1,5 +1,5 @@
 function homeStarMovement(time) {
-    const logo = document.querySelector('.js-home-logo');
+    const logo = document.querySelector('.js-home');
     const star = document.querySelector('.js-home-star');
 
     if (!logo || !star) return;
@@ -71,9 +71,32 @@ function homeStarMovement(time) {
                 rotate: [0, 135],
                 easing: 'easeInOutCubic',
                 duration: 800,
+                complete: function () {
+                    html.style.pointerEvents = 'auto';
+                }
             });
         }, time);
     }
 }
 
 homeStarMovement(1000);
+
+function setupStarHoverClass() {
+    const home = document.querySelector('.js-home');
+    const star = home?.querySelector('.js-home-star');
+    if (!home || !star) return;
+
+    const links = home.querySelectorAll('.js-home-hoverable');
+
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            star.classList.add('is-hovered');
+        });
+
+        link.addEventListener('mouseleave', () => {
+            star.classList.remove('is-hovered');
+        });
+    });
+}
+
+setupStarHoverClass();

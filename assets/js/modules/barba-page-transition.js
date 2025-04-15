@@ -77,6 +77,7 @@ function barbaPageTransition() {
             ifFunctionExist('jumpZones');
             ifFunctionExist('headerColorChange');
             ifFunctionExist('homeStarMovement', 0);
+            ifFunctionExist('setupStarHoverClass');
         }, 100);
 
     }
