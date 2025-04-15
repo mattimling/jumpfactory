@@ -11,8 +11,8 @@
 				<?php while ( have_rows( 'footer' ) ) :
 					the_row();
 
-					$top_decoration = get_field( 'top_decoration', 'options' );
-					$highlight_color = get_field( 'highlight_color', 'options' );
+					$top_decoration = get_sub_field( 'top_decoration' );
+					$highlight_color = get_sub_field( 'highlight_color' );
 
 					$colors = [ 
 						'Blue' => 'text-blue',
@@ -21,9 +21,6 @@
 					];
 
 					$text_color = $colors[ $highlight_color ] ?? 'text-red';
-
-					echo $highlight_color;
-					echo $text_color;
 
 					?>
 
