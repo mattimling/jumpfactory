@@ -9,6 +9,7 @@
 			<?php while ( have_rows( 'menu' ) ) :
 				the_row();
 
+				$navigation = get_sub_field( 'navigation' );
 				$background_color = get_sub_field( 'background_color' );
 				$star_highlight_text = get_sub_field( 'star_highlight_text' );
 				$star_highlight_color = get_sub_field( 'star_highlight_color' );
@@ -51,6 +52,7 @@
 							<?php
 
 							wp_nav_menu( array(
+								'menu' => $navigation,
 								'menu_class' => 'main-menu js-main-menu'
 							) );
 
