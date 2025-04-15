@@ -15,6 +15,7 @@ function preloader() {
 
             html.style.opacity = '1';
             html.style.overflow = 'auto';
+            html.style.pointerEvents = 'auto';
 
             const prelTransitionDelay = 500,
                 prelTransitionEasing = 'easeOutCubic',
