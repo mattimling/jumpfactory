@@ -10,6 +10,10 @@
   @apply font-agn leading-[0.9] text-[calc(0.8rem+5vw)] uppercase -mt-[calc(0.1rem+0.05vw)] -mb-[calc(0.3rem+0.8vw)];
 }
 
+.text-h2-3 {
+  @apply font-agn leading-[0.9] text-[calc(1rem+4vw)] uppercase -mt-[calc(0.1rem+0.05vw)] -mb-[calc(0.3rem+0.8vw)];
+}
+
 .text-h3 {
   @apply font-agn leading-[1] text-[calc(0.8rem+1.2vw)] -mt-[calc(0.1rem+0.05vw)] -mb-[calc(0.05rem+0.3vw)];
 }

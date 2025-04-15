@@ -13,6 +13,7 @@
 @import "partials/components/menu.css";
 @import "partials/components/footer.css";
 @import "partials/components/the-team.css";
+@import "partials/components/article-content.css";
 
 /* Config */
 @config './tailwind.config.js';

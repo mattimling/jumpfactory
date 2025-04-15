@@ -1,0 +1,11 @@
+.article-text {
+  @apply text-h5 text-blue lg:max-w-[75%] 2xl:max-w-[50%];
+}
+
+.article-text h3 {
+  @apply text-h3  uppercase;
+}
+
+.article-text h4 {
+  @apply text-h4;
+}
