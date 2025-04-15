@@ -1,17 +1,17 @@
-<?php
+<?php if ( is_404() ) : ?>
 
-if ( is_404() ) {
-	get_template_part( 'pages/404' );
-}
+	<?php get_template_part( 'pages/404' ); ?>
 
-?>
+<?php else : ?>
 
-<?php get_template_part( 'components/header/header' ); ?>
+	<?php get_template_part( 'components/header/header' ); ?>
 
-<div class="bred">
+	<div class="bred">
 
-	<?php the_content(); ?>
+		<?php the_content(); ?>
 
-</div>
+	</div>
 
-<?php get_template_part( 'components/footer/footer' ); ?>
+	<?php get_template_part( 'components/footer/footer' ); ?>
+
+<?php endif; ?>
