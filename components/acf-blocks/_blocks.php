@@ -57,6 +57,9 @@ elseif ( get_row_layout() == 'contact_form' ) :
 elseif ( get_row_layout() == 'text_content' ) :
 	get_template_part( 'components/acf-blocks/text-content' );
 
+elseif ( get_row_layout() == 'articles' ) :
+	get_template_part( 'components/acf-blocks/articles' );
+
 endif;
 
 ?>
