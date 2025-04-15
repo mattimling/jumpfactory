@@ -55,9 +55,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_status",
                 "operator": "==",
-                "value": "post"
+                "value": "trash"
             }
         ]
     ],
@@ -70,5 +70,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741348810
+    "modified": 1744637142
 }

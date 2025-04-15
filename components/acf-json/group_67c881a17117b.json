@@ -2080,6 +2080,65 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67fd0bb537bee": {
+                    "key": "layout_67fd0bb537bee",
+                    "name": "articles",
+                    "label": "Articles",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67fd57a06dc42",
+                            "label": "Category",
+                            "name": "category",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "Leave empty to show all articles.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_67fd0bd937bf0",
+                            "label": "Articles Limit",
+                            "name": "articles_limit",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "Number of articles to show.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -2114,5 +2173,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743670111
+    "modified": 1744656530
 }
