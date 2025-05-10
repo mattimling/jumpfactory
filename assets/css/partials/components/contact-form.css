@@ -1,0 +1,7 @@
+.contact-form {
+  @apply w-full h-[683px] overflow-hidden;
+}
+
+.contact-form iframe {
+  @apply w-full h-[800px] overflow-scroll;
+}
