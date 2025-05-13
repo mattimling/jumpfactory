@@ -1,36 +1,27 @@
 <?php if ( have_rows( get_page_or_parent_name(), 'options' ) ) : ?>
-
 	<?php while ( have_rows( get_page_or_parent_name(), 'options' ) ) :
 		the_row();
 		?>
 
 		<?php if ( have_rows( 'menu' ) ) : ?>
-
 			<?php while ( have_rows( 'menu' ) ) :
 				the_row();
-
 				$navigation = get_sub_field( 'navigation' );
 				$background_color = get_sub_field( 'background_color' );
 				$star_highlight_text = get_sub_field( 'star_highlight_text' );
 				$star_highlight_color = get_sub_field( 'star_highlight_color' );
 				$bg_color = '';
-
 				$colors = [ 
 					'Blue' => 'bg-blue',
 					'Light Blue' => 'bg-lightBlue',
 					'Red' => 'bg-red',
 				];
-
 				$bg_color = $colors[ $background_color ] ?? 'bg-red';
-
 				?>
 
 				<div class="fixed -top-full invisible [&.is-open]:visible [&.is-open]:top-0 left-0 w-full h-[100dvh] z-10 flex flex-col justify-end will-change-transform transition-all duration-700 ease-custom-in-out js-menu [&.is-open_.js-menu-inner]:opacity-100 <?= $bg_color; ?>">
-
 					<div class="p-8 lg:p-16 flex max-lg:flex-col-reverse max-lg:h-[80%] justify-between lg:items-end will-change-transform opacity-0 js-menu-inner transition-opacity duration-700 ease-custom-in-out">
-
 						<?php
-
 						function add_submenu_toggle_span( $item_output, $item, $depth, $args ) {
 							if ( in_array( 'menu-item-has-children', $item->classes ) ) {
 								// Insert the span before the closing </a>
@@ -44,51 +35,40 @@
 						}
 
 						add_filter( 'walker_nav_menu_start_el', 'add_submenu_toggle_span', 10, 4 );
-
 						?>
 
 						<div class="">
-
 							<?php
-
 							wp_nav_menu( array(
 								'menu' => $navigation,
 								'menu_class' => 'main-menu js-main-menu'
 							) );
-
 							?>
-
 							<div class="text-h4 text-beige flex gap-x-8 mt-6 lg:mt-12 ml-1 [&_.is-active]:opacity-60">
+								<?php
+								$languages = apply_filters( 'wpml_active_languages', NULL, array( 'skip_missing' => 0 ) );
 
-								<a href="#" class="hover-opacity">
-									DE
-								</a>
-
-								<a href="#" class="is-active hover-opacity">
-									EN
-								</a>
-
-								<a href="#" class="hover-opacity">
-									FR
-								</a>
-
+								if ( ! empty( $languages ) ) :
+									foreach ( $languages as $lang ) :
+										$is_current = $lang['active'] ? 'is-active' : '';
+										?>
+										<a href="<?= esc_url( $lang['url'] ); ?>" class="hover-opacity <?= $is_current; ?>">
+											<?= esc_html( strtoupper( $lang['code'] ) ); ?>
+										</a>
+										<?php
+									endforeach;
+								endif;
+								?>
 							</div>
-
 						</div>
 
 						<?php get_template_part( 'components/acf-blocks/_star_highlight', null, array(
 							'text' => $star_highlight_text,
 							'color' => $star_highlight_color,
 						) ); ?>
-
 					</div>
-
 				</div>
-
 			<?php endwhile; ?>
-
 		<?php endif; ?>
-
 	<?php endwhile; ?>
-
 <?php endif; ?>
