@@ -163,7 +163,7 @@
 											<?= $title; ?>
 										</div>
 
-										<a href="#" class="js-holidays-popup-open">
+										<a href="#" class="js-holidays-popup-open border-2 p-3 w-full max-w-[400px] text-center">
 											<?= $open_popup_button; ?>
 										</a>
 
@@ -181,6 +181,7 @@
 										the_row();
 										$title = get_sub_field( 'title' );
 										$text = get_sub_field( 'text' );
+										$form_embed = get_sub_field( 'form_embed' );
 										?>
 
 										<div class="text-h4 uppercase <?= $text_color; ?>">
@@ -189,6 +190,10 @@
 
 										<div class="md:text-right max-w-[400px] leading-[1.2]">
 											<?= $text; ?>
+										</div>
+
+										<div class="footer-subscribe-form">
+											<?= $form_embed; ?>
 										</div>
 									<?php endwhile; ?>
 								<?php endif; ?>
