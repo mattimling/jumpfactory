@@ -1,17 +1,21 @@
 <?php
 // Determine which page ID to use for ACF fields
 if ( is_404() ) {
-	// Get the page URL from options
+	// Get the fallback page URL from options (saved in default language)
 	$error_404_url = get_field( 'error_404_page', 'options' );
 
-	// Convert URL to page object
+	// Get the fallback page object in default language
 	$fallback_page = get_page_by_path( str_replace( home_url( '/' ), '', trailingslashit( $error_404_url ) ) );
-	$page_id = $fallback_page ? $fallback_page->ID : null;
+	$default_page_id = $fallback_page ? $fallback_page->ID : null;
+
+	// Translate page ID to current language using WPML
+	$page_id = apply_filters( 'wpml_object_id', $default_page_id, 'page', true, ICL_LANGUAGE_CODE );
 
 	$text = get_field( 'text', $page_id );
 } else {
 	$page_id = get_queried_object_id();
 }
+
 
 // Now fetch fields from the selected page ID
 $top_left_decoration = get_field( 'top_left_decoration', $page_id );
