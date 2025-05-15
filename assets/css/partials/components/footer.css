@@ -12,7 +12,19 @@
 }
 
 .footer-subscribe-form input {
-  @apply w-full !bg-transparent border-2 p-3 outline-none;
+  @apply w-full !bg-transparent p-3 outline-none;
+}
+
+.footer-subscribe-form form > div {
+  @apply border-2 flex;
+}
+
+.footer-subscribe-form form > div > div {
+  @apply w-full relative;
+}
+
+.footer-subscribe-form form > div > div:first-child:after {
+  @apply content-[''] absolute top-[20%] right-0 h-[60%] border-l opacity-50;
 }
 
 .footer-subscribe-form input::placeholder {
