@@ -1,5 +1,4 @@
 <?php
-
 $background_image = get_sub_field( 'background_image' );
 $title = get_sub_field( 'title' );
 $text = get_sub_field( 'text' );
@@ -7,7 +6,6 @@ $button = get_sub_field( 'button' );
 
 $star_highlight_text = get_sub_field( 'star_highlight_text' );
 $star_highlight_color = get_sub_field( 'star_highlight_color' );
-
 ?>
 
 <div class="p-8 lg:p-16 relative js-element-blurin">
