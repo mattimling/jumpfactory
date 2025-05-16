@@ -1,51 +1,55 @@
 function elementBlurin() {
-    // Only run if the screen width is greater than 768px (desktop)
-    if (window.innerWidth <= 1024) {
-        return;
-    }
+    if (window.innerWidth <= 1024) return;
 
     const elements = document.querySelectorAll('.js-element-blurin, .js-element-blurin-scale');
     const childrenElements = document.querySelectorAll('.js-element-blurin-children > *');
 
     if (!elements.length && !childrenElements.length) return;
 
+    const allElements = [...elements, ...childrenElements];
+
     // Helper function to apply the blur effect
     function applyBlurEffect(element) {
         const rect = element.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
         const maxBlur = 15;
-        const blurDistance = viewportHeight / 4; // Distance over which blur fades
-        const transformDistance = viewportHeight / 4; // Distance over which element will translate
+        const blurDistance = viewportHeight / 4;
+        const transformDistance = viewportHeight / 4;
 
-        // Calculate opacity and transform progress
         const opacityProgress = Math.min(Math.max(0, viewportHeight - rect.top) / blurDistance, 1);
         let transformProgress = Math.min(Math.max(0, viewportHeight - rect.top) / transformDistance, 1);
-
-        // Apply easing to translateY (ease out)
         transformProgress = 0.5 * (1 - Math.cos(Math.PI * transformProgress));
 
-        // Calculate blur, opacity, and transform (translation)
-        const blurAmount = maxBlur * (1 - opacityProgress); // Interpolates from 15px to 0px
-        const opacityAmount = opacityProgress; // Interpolates from 0 to 1
-        const translateAmount = 50 * (1 - transformProgress); // Moves from translateY(30px) to translateY(0)
+        const blurAmount = maxBlur * (1 - opacityProgress);
+        const opacityAmount = opacityProgress;
+        const translateAmount = 50 * (1 - transformProgress);
 
-        // Apply styles to the element
-        // element.style.filter = `blur(${blurAmount}px)`; // Un-comment if you want to apply blur
+        // element.style.filter = `blur(${blurAmount}px)`; // Optional
         element.style.opacity = opacityAmount;
         element.style.transform = `translateY(${translateAmount}px)`;
     }
 
-    // Scroll event handler
     function onScroll() {
-        elements.forEach(applyBlurEffect);
-        childrenElements.forEach(applyBlurEffect);
+        allElements.forEach(applyBlurEffect);
     }
 
-    // Apply the effect initially when the page loads
+    // Initial call
     onScroll();
 
-    // Use Lenis scroll handler instead of native scroll event
+    // Listen to Lenis scroll
     lenis.on('scroll', onScroll);
+
+    // ✅ Watch for any size/position changes using ResizeObserver
+    const resizeObserver = new ResizeObserver(() => {
+        requestAnimationFrame(onScroll);
+    });
+
+    allElements.forEach(el => resizeObserver.observe(el));
+
+    // ✅ Also listen to window resize in case of layout changes
+    window.addEventListener('resize', () => {
+        requestAnimationFrame(onScroll);
+    });
 }
 
 elementBlurin();
