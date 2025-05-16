@@ -1,12 +1,8 @@
 <?php if ( have_rows( 'slides' ) ) : ?>
-
-	<div class="overflow-hidden js-swiper-centered">
-
+	<div class="overflow-hidden js-swiper-centered js-element-blurin">
 		<div class="flex relative swiper-wrapper cursor-move">
-
 			<?php while ( have_rows( 'slides' ) ) :
 				the_row();
-
 				$image = get_sub_field( 'image' );
 				$title = get_sub_field( 'title' );
 				?>
@@ -18,11 +14,7 @@
 						<?= $title; ?>
 					</div>
 				</div>
-
 			<?php endwhile; ?>
-
 		</div>
-
 	</div>
-
 <?php endif; ?>
