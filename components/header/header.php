@@ -15,12 +15,21 @@ $bg_color = ! empty( $general_options['background_color'] ) ? $general_options['
 
 	<?php wp_head(); ?>
 
-	<?= $general_options['roller_checkout_script'] ?? ''; ?>
+	<?php if ( have_rows( get_page_or_parent_name(), 'options' ) ) : ?>
+		<?php while ( have_rows( get_page_or_parent_name(), 'options' ) ) :
+			the_row();
+			$roller_checkout_script = get_sub_field( 'roller_checkout_script' );
+			?>
+
+			<?= $roller_checkout_script; ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
 </head>
 
 <?php $body_classes = 'font-pjs text-body select-none text-charcoal overflow-x-hidden'; ?>
 
 <body data-barba="js-barba-wrapper" <?php body_class( $body_classes ); ?> <?= $preloader ? 'style="opacity: 0"' : ''; ?> style="<?= $bg_color; ?>">
+
 	<?php
 	// Tailwind breakpoints only on localhost
 	if ( is_localhost() ) {

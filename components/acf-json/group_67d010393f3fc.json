@@ -54,27 +54,6 @@
                     "enable_opacity": 0,
                     "return_format": "string",
                     "allow_in_bindings": 0
-                },
-                {
-                    "key": "field_681f775d1889c",
-                    "label": "Roller Checkout Script",
-                    "name": "roller_checkout_script",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
                 }
             ]
         },
@@ -112,6 +91,27 @@
             },
             "layout": "block",
             "sub_fields": [
+                {
+                    "key": "field_681f775d1889c",
+                    "label": "Roller Checkout Script",
+                    "name": "roller_checkout_script",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
                 {
                     "key": "field_67da981548d47",
                     "label": "Header",
@@ -1172,6 +1172,27 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_68820dbae7758",
+                    "label": "Roller Checkout Script",
+                    "name": "roller_checkout_script",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_67fe35a875ac0",
                     "label": "Header",
                     "name": "header",
@@ -2230,6 +2251,27 @@
             },
             "layout": "block",
             "sub_fields": [
+                {
+                    "key": "field_68820dc8e7759",
+                    "label": "Roller Checkout Script",
+                    "name": "roller_checkout_script",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
                 {
                     "key": "field_67fe5982c9318",
                     "label": "Header",
@@ -3739,5 +3781,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747219297
+    "modified": 1753353686
 }
