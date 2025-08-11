@@ -40,7 +40,7 @@ $title = get_sub_field( 'title' );
 											<?php if ( $roller_checkout_param ) : ?>
 												<div class="cursor-pointer relative uppercase text-[15px] group lg:h-[44px]" <?= $roller_checkout_param; ?>>
 												<?php else : ?>
-													<a href="<?= ( $link && $link['url'] ) ? $link['url'] : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px]">
+													<a href="<?= ( $link && ! empty( $link['url'] ) ) ? esc_url( $link['url'] ) : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px]" <?= ( ! $link || empty( $link['url'] ) ) ? 'onclick="event.preventDefault();"' : '' ?>>
 													<?php endif; ?>
 													<div class="px-3 py-1 lg:px-5 lg:py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-[3px] border-red text-center">
 														<?= $title; ?>

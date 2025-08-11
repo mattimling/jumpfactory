@@ -114,7 +114,7 @@
                     "key": "layout_67ff7e5b7ef76",
                     "name": "button",
                     "label": "Button",
-                    "display": "block",
+                    "display": "table",
                     "sub_fields": [
                         {
                             "key": "field_67ff7e5f7ef78",
@@ -163,5 +163,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744797292
+    "modified": 1754560185
 }

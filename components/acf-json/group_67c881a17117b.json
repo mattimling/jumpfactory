@@ -615,16 +615,37 @@
                             "name": "button",
                             "aria-label": "",
                             "type": "link",
-                            "instructions": "",
+                            "instructions": "&nbsp;",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "return_format": "array",
                             "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6894779742bfc",
+                            "label": "Roller Checkout Param",
+                            "name": "roller_checkout_param",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "If empty, button link will be used.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -955,16 +976,37 @@
                             "name": "button",
                             "aria-label": "",
                             "type": "link",
-                            "instructions": "",
+                            "instructions": "&nbsp;",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "return_format": "array",
                             "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_68947d91185d7",
+                            "label": "Roller Checkout Param",
+                            "name": "roller_checkout_param",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "If empty, button link will be used.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_67dacaa5f7253",
@@ -2244,5 +2286,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746892019
+    "modified": 1754562225
 }

@@ -45,7 +45,7 @@ $star_highlight_color = get_field( 'star_highlight_color', $page_id );
 					?>
 
 					<?php if ( $location ) : ?>
-						<a href="<?= $location['url']; ?>" class="hover:text-blue transition-colors duration-300">
+						<a href="<?= $location['url']; ?>" class="hover:text-blue transition-colors duration-300 js-barba-prevent js-exit-link">
 							<?= $location['title']; ?>
 						</a>
 					<?php endif; ?>
