@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_dequeue_style( 'global-styles' );
 
 	// Leave it for Admin bar functionality - it'll not be on frontend
-	// wp_deregister_script( 'jquery' ); 
+	// wp_deregister_script( 'jquery' );
 	// wp_register_script( 'jquery', '', array(), '', true );
 
 } );
