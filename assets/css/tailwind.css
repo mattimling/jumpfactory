@@ -16,6 +16,7 @@
 @import "partials/components/article-content.css";
 @import "partials/components/error-404.css";
 @import "partials/components/contact-form.css";
+@import "partials/components/cookie-banner.css";
 
 /* Config */
 @config './tailwind.config.js';

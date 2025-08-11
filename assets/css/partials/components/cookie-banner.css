@@ -1,0 +1,15 @@
+.cc-nb-main-container {
+  @apply !px-8 !py-6 font-pjs text-body  !bg-lightBlue;
+
+  .cc-nb-title {
+    @apply text-h4 !text-blue !mb-3;
+  }
+
+  .cc-nb-text-content {
+    @apply !text-[15px] !leading-[1.2] !text-[#fff];
+  }
+
+  .cc-nb-okagree {
+    @apply !bg-blue;
+  }
+}
