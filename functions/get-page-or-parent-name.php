@@ -7,9 +7,9 @@ function get_page_or_parent_name() {
 		$parent_id = wp_get_post_parent_id( $current_page->ID );
 
 		if ( $parent_id ) {
-			return get_the_title( $parent_id );
+			return strtolower( get_the_title( $parent_id ) );
 		} else {
-			return get_the_title( $current_page );
+			return strtolower( get_the_title( $current_page ) );
 		}
 	}
 
@@ -21,7 +21,7 @@ function get_page_or_parent_name() {
 		if ( $articles_page_url ) {
 			$page_id = url_to_postid( $articles_page_url );
 			if ( $page_id ) {
-				return get_the_title( $page_id );
+				return strtolower( get_the_title( $page_id ) );
 			}
 		}
 	}
