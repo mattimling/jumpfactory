@@ -52,7 +52,7 @@
 									foreach ( $languages as $lang ) :
 										$is_current = $lang['active'] ? 'is-active' : '';
 										?>
-										<a href="<?= esc_url( $lang['url'] ); ?>" class="hover-opacity <?= $is_current; ?>">
+										<a href="<?= esc_url( $lang['url'] ); ?>" class="hover-opacity js-barba-prevent js-exit-link <?= $is_current; ?>">
 											<?= esc_html( strtoupper( $lang['code'] ) ); ?>
 										</a>
 										<?php

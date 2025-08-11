@@ -15,6 +15,7 @@ $bg_color = ! empty( $general_options['background_color'] ) ? $general_options['
 
 	<?php wp_head(); ?>
 
+	<!-- Roller param -->
 	<?php if ( have_rows( get_page_or_parent_name(), 'options' ) ) : ?>
 		<?php while ( have_rows( get_page_or_parent_name(), 'options' ) ) :
 			the_row();
@@ -48,7 +49,7 @@ $bg_color = ! empty( $general_options['background_color'] ) ? $general_options['
 	?>
 
 	<div class="page-wrapper js-page-wrapper relative" <?= $preloader ? 'style="opacity: 0"' : ''; ?>>
-		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>">
+		<main data-barba="js-barba-content" data-barba-namespace="<?= $wp_query->queried_object->post_name ?>" class="js-barba-content [&.fade-out]:opacity-0 transition-opacity duration-500">
 			<div class="content-wrapper js-content-wrapper">
 				<?php if ( ! is_404() ) : ?>
 					<?php get_template_part( 'components/header/header-bar' ); ?>

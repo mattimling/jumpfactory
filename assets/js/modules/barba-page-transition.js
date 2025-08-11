@@ -78,6 +78,7 @@ function barbaPageTransition() {
             ifFunctionExist('headerColorChange');
             ifFunctionExist('homeStarMovement', 0);
             ifFunctionExist('setupStarHoverClass');
+            ifFunctionExist('exitLink');
         }, 100);
 
     }
@@ -110,7 +111,7 @@ function barbaPageTransition() {
 
             },
         },],
-        prevent: ({ el }) => el.classList && el.classList.contains('_brb-prv')
+        prevent: ({ el }) => el.classList && el.classList.contains('js-barba-prevent')
     })
 
     barba.hooks.enter(() => {

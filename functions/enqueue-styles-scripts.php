@@ -56,6 +56,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'home-star-movement',
 		'holidays-popup',
 		'scroll-restoration',
+		'exit-link',
 	];
 
 	// Define External JS files to enqueue
