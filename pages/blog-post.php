@@ -69,7 +69,7 @@ $articles_options = get_field( 'articles', 'options' );
 								<div class="flex justify-start js-element-blurin">
 									<?php get_template_part( 'components/acf-blocks/_button', null, array(
 										'button' => $link,
-										'class' => 'js-element-blurin'
+										'class' => 'js-element-blurin',
 									) ); ?>
 								</div>
 							<?php endif; ?>
