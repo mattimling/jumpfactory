@@ -31,13 +31,13 @@
     @apply w-0 h-0 ml-0 mt-0 bg-red;
   }
   100% {
-    @apply w-[800px] h-[800px] -ml-[400px] -mt-[400px] bg-red;
+    @apply w-[1500px] h-[1500px] -ml-[750px] -mt-[750px] bg-red;
   }
 }
 
 @keyframes desplode {
   0% {
-    @apply w-[800px] h-[800px] -ml-[400px] -mt-[400px] bg-red;
+    @apply w-[1500px] h-[1500px] -ml-[750px] -mt-[750px] bg-red;
   }
   100% {
     @apply w-0 h-0 ml-0 mt-0 bg-red;
