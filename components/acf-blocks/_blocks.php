@@ -60,6 +60,9 @@ elseif ( get_row_layout() == 'text_content' ) :
 elseif ( get_row_layout() == 'articles' ) :
 	get_template_part( 'components/acf-blocks/articles' );
 
+elseif ( get_row_layout() == 'popup' ) :
+	get_template_part( 'components/acf-blocks/popup' );
+
 endif;
 
 ?>

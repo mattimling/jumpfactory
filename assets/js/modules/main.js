@@ -15,3 +15,8 @@ const rsp = {
     'xxl': 1536,
     'xxxl': 1921
 }
+
+setTimeout(timer => {
+    // document.querySelector('.js-menu-button').click();
+    // lenis.scrollTo(9500, { immediate: true });
+}, 100);

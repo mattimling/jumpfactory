@@ -3,6 +3,7 @@ $background_image = get_sub_field( 'background_image' );
 $title = get_sub_field( 'title' );
 $text = get_sub_field( 'text' );
 $button = get_sub_field( 'button' );
+$open_popup = get_sub_field( 'open_popup' );
 $roller_checkout_param = get_sub_field( 'roller_checkout_param' );
 
 $star_highlight_text = get_sub_field( 'star_highlight_text' );
@@ -31,6 +32,7 @@ $star_highlight_color = get_sub_field( 'star_highlight_color' );
 						'button' => $button,
 						'class' => 'button-beige',
 						'roller_checkout_param' => $roller_checkout_param,
+						'open_popup' => $open_popup
 					) ); ?>
 				</div>
 			<?php endif; ?>

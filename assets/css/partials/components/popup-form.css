@@ -1,0 +1,20 @@
+.popup-subscribe-form {
+  @apply w-full max-w-[900px] flex;
+}
+
+.popup-subscribe-form form,
+.popup-subscribe-form form > div {
+  @apply flex flex-col gap-y-5 items-start w-full;
+}
+
+.popup-subscribe-form label {
+  @apply hidden;
+}
+
+.popup-subscribe-form input {
+  @apply w-full xs:w-[300px] sm:w-[400px] md:w-[500px] !bg-transparent p-3 outline-none border-2;
+}
+
+.popup-subscribe-form button {
+  @apply uppercase mt-5 footer-link cursor-pointer hover:opacity-50 transition-opacity duration-150;
+}

@@ -54,7 +54,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		'location-map',
 		'jump-zones',
 		'home-star-movement',
-		'holidays-popup',
+		'popup',
 		'scroll-restoration',
 		'exit-link',
 	];

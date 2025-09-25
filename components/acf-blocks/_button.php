@@ -2,6 +2,7 @@
 $button = $args['button'] ?? '';
 $class = $args['class'] ?? '';
 $roller_checkout_param = $args['roller_checkout_param'] ?? '';
+$open_popup = $args['open_popup'] ?? '';
 ?>
 
 <div class="<?= $class; ?>">
@@ -11,7 +12,7 @@ $roller_checkout_param = $args['roller_checkout_param'] ?? '';
 		<?php if ( $roller_checkout_param ) : ?>
 			<div class="button-big-inner cursor-pointer" <?= $roller_checkout_param; ?>>
 			<?php else : ?>
-				<a href="<?= ! $roller_checkout_param ? $button['url'] : '#'; ?>" class="button-big-inner">
+				<a href="<?= ! $roller_checkout_param ? $button['url'] : '#'; ?>" class="button-big-inner <?= $open_popup ? 'js-popup-open prevent-children' : ''; ?>">
 				<?php endif; ?>
 				<span class="button-big-text">
 					<?= $button['title'] ?>
