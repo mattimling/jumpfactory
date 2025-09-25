@@ -572,6 +572,28 @@
                                             "return_format": "array",
                                             "allow_in_bindings": 0,
                                             "parent_repeater": "field_67e2aacdc6d95"
+                                        },
+                                        {
+                                            "key": "field_68d571c5a005d",
+                                            "label": "Open popup",
+                                            "name": "open_popup",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "allow_in_bindings": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": "",
+                                            "ui": 1,
+                                            "parent_repeater": "field_67e2aacdc6d95"
                                         }
                                     ],
                                     "parent_repeater": "field_67e2aa87c6d91"
@@ -2064,6 +2086,28 @@
                                             "return_format": "array",
                                             "allow_in_bindings": 0,
                                             "parent_repeater": "field_67e28169a6a9a"
+                                        },
+                                        {
+                                            "key": "field_68d562ee42ed5",
+                                            "label": "Open Popup",
+                                            "name": "open_popup",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "allow_in_bindings": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": "",
+                                            "ui": 1,
+                                            "parent_repeater": "field_67e28169a6a9a"
                                         }
                                     ],
                                     "parent_repeater": "field_67e27bb596192"
@@ -2359,5 +2403,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758798327
+    "modified": 1758818770
 }

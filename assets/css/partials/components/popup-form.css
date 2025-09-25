@@ -18,3 +18,8 @@
 .popup-subscribe-form button {
   @apply uppercase mt-5 footer-link cursor-pointer hover:opacity-50 transition-opacity duration-150;
 }
+
+iframe[src^="https://forms.roller.app"]
+{
+  @apply w-[300px] xs:w-[340px] sm:w-[550px] md:w-[630px] h-[80vh];
+}

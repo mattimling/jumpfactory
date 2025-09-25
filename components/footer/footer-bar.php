@@ -163,7 +163,7 @@
 											<?= $title; ?>
 										</div>
 
-										<a href="#" class="js-popup-open border-2 p-3 w-full max-w-[400px] text-center">
+										<a href="#holiday-popup" class="js-popup-open border-2 p-3 w-full max-w-[400px] text-center">
 											<?= $open_popup_button; ?>
 										</a>
 
@@ -273,7 +273,7 @@
 						the_row();
 						?>
 						<?php if ( have_rows( 'holidays_popup', 'options' ) ) : ?>
-							<div class="fixed top-0 left-0 w-full h-[100dvh] flex justify-center items-center js-popup opacity-0 invisible pointer-events-none -z-[1] [&.is-open]:opacity-100 [&.is-open]:visible [&.is-open]:pointer-events-auto [&.is-open]:z-[100] transition-all duration-200">
+							<div class="fixed top-0 left-0 w-full h-[100dvh] flex justify-center items-center js-popup opacity-0 invisible pointer-events-none -z-[1] [&.is-open]:opacity-100 [&.is-open]:visible [&.is-open]:pointer-events-auto [&.is-open]:z-[100] transition-all duration-200" data-popup-id="holiday-popup">
 								<div class="bg-[black] opacity-75 absolute top-0 left-0 w-full h-full"></div>
 
 								<div class="bg-charcoal relative z-50 text-beige py-[60px] px-[30px] md:px-[60px] md:rounded-[10px] drop-shadow-lg text-[15px] flex flex-col gap-y-3 leading-[1.3] max-md:overflow-auto max-md:h-[100dvh] max-md:w-full">

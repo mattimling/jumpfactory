@@ -27,12 +27,13 @@
 							$hover_text = get_sub_field( 'hover_text' );
 							$roller_checkout_param = get_sub_field( 'roller_checkout_param' );
 							$link = get_sub_field( 'link' );
+							$open_popup = get_sub_field( 'open_popup' );
 							?>
 
 							<?php if ( $roller_checkout_param ) : ?>
 								<div class="cursor-pointer relative uppercase text-[15px] group lg:h-[44px]" <?= $roller_checkout_param; ?>>
 								<?php else : ?>
-									<a href="<?= ( $link && ! empty( $link['url'] ) ) ? esc_url( $link['url'] ) : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px]" <?= ( ! $link || empty( $link['url'] ) ) ? 'onclick="event.preventDefault();"' : '' ?>>
+									<a href="<?= ( $link && ! empty( $link['url'] ) ) ? esc_url( $link['url'] ) : '#'; ?>" class="relative uppercase text-[15px] group lg:h-[44px] <?= $open_popup ? 'js-popup-open prevent-children' : ''; ?>" <?= ( ! $link || empty( $link['url'] ) ) ? 'onclick="event.preventDefault();"' : '' ?>>
 									<?php endif; ?>
 									<div class="px-3 py-1 lg:px-5 lg:py-3 lg:group-hover:opacity-0 transition-opacity duration-300 border-[3px] border-blue">
 										<?= $title; ?>
